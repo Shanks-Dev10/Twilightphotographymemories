@@ -931,7 +931,7 @@
         /* Container */
         .stars,
         .hearts,
-        .cakes {
+        .balloons {
             position: fixed;
             width: 100%;
             height: 100%;
@@ -941,7 +941,7 @@
         /* Star style */
         .stars span,
         .hearts span,
-        .cakes span {
+        .balloons span {
             position: absolute;
             top: -10px;
             color: #fff;
@@ -1145,7 +1145,7 @@
                         <div class="service-img-overlay"></div>
                         <span class="service-badge">✦ Cake Smash</span>
                     </div>
-                    <div class="cakes"></div>
+                    <div class="balloons"></div>
                 </div>
                 <div class="service-text">
                     <span class="service-num">03</span>
@@ -1481,7 +1481,7 @@
 
         for (let i = 0; i < 100; i++) {
             let heart = document.createElement('span');
-            heart.innerHTML = "💖";
+            heart.innerHTML = "💗";
 
             heart.style.left = Math.random() * 100 + "vw";
             heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
@@ -1490,17 +1490,17 @@
             heartsContainer.appendChild(heart);
         }
 
-        const cakesContainer = document.querySelector('.cakes');
+        const balloonsContainer = document.querySelector('.balloons');
 
         for (let i = 0; i < 100; i++) {
-            let cake = document.createElement('span');
-            cake.innerHTML = "💗";
+            let balloon = document.createElement('span');
+            balloon.innerHTML = "🎈";
 
-            cake.style.left = Math.random() * 100 + "vw";
-            cake.style.animationDuration = (Math.random() * 3 + 2) + "s";
-            cake.style.fontSize = (Math.random() * 10 + 10) + "px";
+            balloon.style.left = Math.random() * 100 + "vw";
+            balloon.style.animationDuration = (Math.random() * 3 + 2) + "s";
+            balloon.style.fontSize = (Math.random() * 10 + 10) + "px";
 
-            cakesContainer.appendChild(cake);
+            balloonsContainer.appendChild(balloon);
         }
     </script>
 </body>
