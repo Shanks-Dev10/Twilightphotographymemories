@@ -372,7 +372,7 @@
         }
 
         .about-inner {
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -424,7 +424,7 @@
 
         .about-pull {
             position: absolute;
-            top: 55%;
+            top: 40%;
             right: 0;
             transform: translateY(-50%);
             background: var(--teal);
@@ -632,7 +632,7 @@
         .masonry {
             columns: 3;
             column-gap: 16px;
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
         }
 
@@ -692,7 +692,7 @@
         }
 
         .wardrobe-inner {
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
         }
 
@@ -1369,6 +1369,18 @@
             max-width: 260px;
         }
 
+        .contact-info {
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            font-size: 0.82rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
         .footer-col h4 {
             font-size: 0.72rem;
             letter-spacing: 0.15em;
@@ -1394,6 +1406,28 @@
 
         .footer-col ul a:hover {
             color: #fff;
+        }
+
+        .social-row {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .social-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+            text-decoration: none;
+        }
+
+        .social-btn:hover {
+            background: var(--teal);
         }
 
         .footer-bottom {
@@ -1513,6 +1547,223 @@
                 opacity: 0;
             }
         }
+
+        /* =========================
+   FINAL RESPONSIVE FIX
+   (Service Page)
+========================= */
+
+        /* GLOBAL */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        /* ---------- TABLET ---------- */
+        @media (max-width: 1024px) {
+
+            nav {
+                padding: 16px 30px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .service-nav {
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+
+            .service-nav a {
+                flex: 0 0 auto;
+            }
+
+            .page-hero {
+                grid-template-columns: 1fr;
+                gap: 50px;
+                padding: 40px 30px 60px;
+            }
+
+            .hero-collage {
+                height: 420px;
+            }
+
+            .about-inner {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .timeline-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-step-left,
+            .timeline-step-right {
+                text-align: left;
+                align-items: flex-start;
+                padding: 0 0 40px 0;
+            }
+
+            .timeline-center {
+                display: none;
+            }
+
+            .masonry {
+                columns: 2;
+            }
+
+            .wardrobe-grid,
+            .packages-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* ---------- MOBILE ---------- */
+        @media (max-width: 768px) {
+
+            .breadcrumb {
+                padding: 100px 20px 0;
+            }
+
+            .page-hero {
+                padding: 30px 20px 50px;
+            }
+
+            .about-section,
+            .timeline-section,
+            .gallery-section,
+            .wardrobe-section,
+            .packages-section,
+            .faq-section,
+            .testimonials-section,
+            .cta-section {
+                padding: 60px 20px;
+            }
+
+            /* HERO */
+            .hero-stats {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            /* COLLAGE FIX */
+            .hero-collage {
+                height: auto;
+            }
+
+            .collage-main,
+            .collage-accent,
+            .collage-accent2 {
+                position: relative;
+                width: 100%;
+                height: 220px;
+                margin-bottom: 12px;
+            }
+
+            .collage-badge {
+                position: static;
+                transform: none;
+                display: inline-block;
+                margin-top: 10px;
+            }
+
+            /* ABOUT STACK FIX */
+            .about-image-stack {
+                height: auto;
+            }
+
+            .stack-img1,
+            .stack-img2 {
+                position: relative;
+                width: 100%;
+                height: 250px;
+                margin-bottom: 12px;
+            }
+
+            .about-pull {
+                position: static;
+                transform: none;
+                margin-top: 10px;
+            }
+
+            /* GALLERY */
+            .masonry {
+                columns: 1;
+            }
+
+            /* GRIDS */
+            .wardrobe-grid,
+            .packages-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .wardrobe-tips {
+                grid-template-columns: 1fr;
+            }
+
+            /* CTA */
+            .cta-title {
+                font-size: 2rem;
+            }
+
+            /* FOOTER */
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+            footer{
+                padding: 50px 20px;
+            }
+        }
+
+        /* ---------- SMALL MOBILE ---------- */
+        @media (max-width: 480px) {
+
+            .page-title {
+                font-size: 1.8rem;
+            }
+
+            .cta-title {
+                font-size: 1.6rem;
+            }
+
+            .btn-primary,
+            .btn-outline,
+            .btn-white {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .service-nav {
+                padding: 0 10px;
+            }
+
+            .service-nav a {
+                font-size: 0.7rem;
+                padding: 12px 14px;
+            }
+        }
     </style>
 </head>
 
@@ -1558,28 +1809,27 @@
         <div class="page-hero">
             <!-- LEFT: TEXT -->
             <div class="hero-left fade-up">
-                <span class="section-eyebrow">Toronto, Ontario</span>
-                <h1 class="page-title">Maternity Photography<br>in <em>Toronto</em></h1>
+                <!-- <span class="section-eyebrow">Toronto, Ontario</span> -->
+                <h1 class="page-title">Hey there, gorgeous <br>in <em>mamas-to-be!!</em></h1>
                 <p class="page-desc">
-                    Welcome to your maternity photography experience — a celebration of the most luminous,
-                    transformative chapter of your life. I believe that every curve, every glow, every quiet moment of
-                    anticipation deserves to be honoured with images that will take your breath away for generations to
-                    come.
+                    The ideal time for a maternity session is 30–36 weeks, when your bump is beautifully rounded and
+                    comfortable. For expecting multiples or twins, we recommend 20–24 weeks for a safe and relaxed
+                    shoot.
                 </p>
                 <p class="page-desc">
-                    Sessions are crafted with intention, warmth, and an eye for the timeless. Whether you dream of
-                    flowing gowns in a sunlit studio or candid tenderness at golden hour, I bring your vision to life.
+                    We curate locations that reflect your style like serene outdoor settings, studios, or the comfort of
+                    your own home. Every detail is thoughtfully considered to create a luxurious, effortless experience.
                 </p>
                 <div class="hero-stats">
                     <div class="stat-item"><span class="stat-num">500+</span><span class="stat-label">Mamas
                             Photographed</span></div>
                     <div class="stat-item"><span class="stat-num">8+</span><span class="stat-label">Years
                             Experience</span></div>
-                    <div class="stat-item"><span class="stat-num">28–36</span><span class="stat-label">Ideal
+                    <div class="stat-item"><span class="stat-num">30–36</span><span class="stat-label">Ideal
                             Weeks</span></div>
                 </div>
                 <div class="hero-btns">
-                    <a href="mailto:hello@bloomandbare.ca" class="btn-primary">
+                    <a href="#" class="btn-primary">
                         Book Your Session
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                             <path d="M3 8h10M8 3l5 5-5 5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"
@@ -1632,20 +1882,18 @@
             </div>
             <div class="about-text fade-up">
                 <span class="section-eyebrow">Your Photographer</span>
-                <h2>Welcome to <em>Professional Maternity Photography</em> in Toronto & GTA</h2>
+                <h2>Welcome to <em>Professional Maternity Photography</em> in Canada</h2>
                 <p>
-                    I'm a Toronto-based maternity and newborn photographer with over 8 years of experience capturing the
-                    most sacred moments of motherhood. My studio is a warm, welcoming sanctuary where you can exhale, be
-                    yourself, and let the beauty of this chapter shine through naturally.
+                    I am a professional and certified Maternity, Newborn, and Child Photographer who transitioned from a
+                    successful career as a Software Engineer to pursue the artistic path that has always inspired me.
                 </p>
                 <p>
-                    Every session begins with a consultation to understand your vision, your style, and the story you
-                    want to tell. I bring wardrobe guidance, professional styling advice, and a calm, unhurried approach
-                    that allows real emotion to surface — because the best photographs are never forced.
+                    Certified under renowned and ace fashion photographer Karthik Srinivasan at KAPA and further trained
+                    by Amrita Samant (MommyShots by Amrita) a pioneer in the maternity and child photography industry.
                 </p>
                 <p>
-                    I work with families across Toronto, North York, Mississauga, Markham, and the entire Greater
-                    Toronto Area, offering both studio sessions and curated outdoor locations.
+                    For me, photography is more than a profession, it is a deeply rooted passion that inspires me to
+                    create timeless, meaningful pictures for every family I work with.
                 </p>
                 <span class="about-signature">— With love, Bloom & Bare Photography</span>
             </div>
@@ -1913,9 +2161,18 @@
                 </div>
             </div>
         </div>
-        <p style="text-align:center; margin-top:30px; font-size:0.82rem; color:var(--text-light);">All packages include
-            travel within 25km of Toronto studio. Custom packages available — <a href="mailto:hello@bloomandbare.ca"
-                style="color:var(--teal);">contact me</a> to discuss.</p>
+        <div style=" max-width: 1100px; margin: 30px auto;">
+            <p style=" font-size:0.82rem; color:var(--text-light);"> <span style="color: red;">*</span>It is prohibited
+                to
+                use your cell phone camera or any other camera during the photo session.
+            </p>
+            <p style="  font-size:0.82rem; color:var(--text-light);"><span style="color: red;">*</span> It is client’s
+                responsibility to download, store and protect photographs from loosing after 14 days from the
+                date they have been sent to the client. After 14 days I don’t grantee availability of your pictures.
+                Additional fee of $30 applied for re-sending the pictures in case if I still have them.</p>
+            <p style="  font-size:0.82rem; color:var(--text-light);"><span style="color: red;">*</span> By using my
+                services, you agree to these terms.</p>
+        </div>
     </section>
 
     <!-- FAQ -->
@@ -2096,6 +2353,55 @@
                 <span class="brand-name">Bloom & Bare Photography</span>
                 <p>Specialising in maternity, newborn, and family photography across Toronto and the Greater Toronto
                     Area. Every session is crafted with care, creativity, and heart.</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                            <path
+                                d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5zm0 6.5A1.5 1.5 0 1 1 8 4a1.5 1.5 0 0 1 0 3.5z"
+                                fill="rgba(255,255,255,0.5)" />
+                        </svg>
+                        Canada
+                    </div>
+                    <div class="contact-item">
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                            <path
+                                d="M2 2h12a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm6 7L2.5 4h11L8 9z"
+                                fill="rgba(255,255,255,0.5)" />
+                        </svg>
+                        twilightmemoriesphotography@gmail.com
+                    </div>
+                    <div class="contact-item">
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                            <path
+                                d="M3 2a1 1 0 0 1 1-1h2l1 3-1.5 1.5A10 10 0 0 0 9.5 9L11 7.5l3 1v2a1 1 0 0 1-1 1A12 12 0 0 1 2 3z"
+                                fill="rgba(255,255,255,0.5)" />
+                        </svg>
+                        +1 4379935392
+                    </div>
+                </div>
+                <div class="social-row">
+                    <a href="#" class="social-btn" aria-label="Instagram"><svg width="14" height="14"
+                            viewBox="0 0 24 24" fill="none">
+                            <rect x="2" y="2" width="20" height="20" rx="5" stroke="white" stroke-width="1.5" />
+                            <circle cx="12" cy="12" r="5" stroke="white" stroke-width="1.5" />
+                            <circle cx="17.5" cy="6.5" r="1" fill="white" />
+                        </svg></a>
+                    <a href="#" class="social-btn" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24"
+                            fill="none">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="white"
+                                stroke-width="1.5" stroke-linejoin="round" />
+                        </svg></a>
+                    <a href="#" class="social-btn" aria-label="Pinterest"><svg width="14" height="14"
+                            viewBox="0 0 24 24" fill="rgba(255,255,255,0.8)">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.77 1.22-5.18 1.22-5.18s-.31-.63-.31-1.55c0-1.46.84-2.55 1.89-2.55.89 0 1.32.67 1.32 1.47 0 .9-.57 2.24-.87 3.48-.25 1.04.52 1.88 1.54 1.88 1.84 0 3.08-2.37 3.08-5.18 0-2.14-1.44-3.64-3.49-3.64-2.38 0-3.77 1.78-3.77 3.63 0 .72.28 1.49.62 1.91.07.08.08.15.06.23-.06.26-.2.82-.23.93-.04.15-.12.18-.28.11-.98-.46-1.59-1.9-1.59-3.06 0-2.49 1.81-4.77 5.21-4.77 2.74 0 4.87 1.95 4.87 4.56 0 2.72-1.71 4.9-4.08 4.9-.8 0-1.55-.41-1.8-.9L9.8 18.3c-.2.75-.72 1.69-1.07 2.25.8.25 1.65.39 2.27.39C17.52 21 22 16.52 22 12c0-5.52-4.48-10-10-10z" />
+                        </svg></a>
+                    <a href="#" class="social-btn" aria-label="TikTok"><svg width="14" height="14" viewBox="0 0 24 24"
+                            fill="white">
+                            <path
+                                d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.72a8.16 8.16 0 0 0 4.77 1.52V6.75a4.85 4.85 0 0 1-1-.06z" />
+                        </svg></a>
+                </div>
             </div>
             <div class="footer-col">
                 <h4>Services</h4>
@@ -2129,7 +2435,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <span>© 2025 Bloom & Bare Photography. Toronto, Ontario, Canada.</span>
+            <span>© 2026 Twilight Memories Photography. Canada.</span>
             <span>Privacy Policy &nbsp;·&nbsp; Terms of Service</span>
         </div>
     </footer>

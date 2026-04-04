@@ -127,7 +127,7 @@
 
         .hero-inner {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 500px 1fr;
             gap: 80px;
             align-items: center;
             max-width: 1300px;
@@ -933,9 +933,9 @@
         .hearts,
         .balloons {
             position: fixed;
-            width: 100%;
-            height: 100%;
-            z-index: -12;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
         }
 
         /* Star style */
@@ -959,6 +959,317 @@
             100% {
                 transform: translateY(100vh);
                 opacity: 0;
+            }
+        }
+
+
+        .review-section {
+            background: #efefef;
+            padding: 60px 0;
+        }
+
+        /* TITLE */
+
+        .review-title {
+            text-align: center;
+            color: #e34133;
+            font-size: 16px;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+        }
+
+        /* ===============================
+   SLIDER
+=============================== */
+
+        .slider-wrapper {
+            overflow: hidden;
+            max-width: 1300px;
+            margin: auto;
+            position: relative;
+        }
+
+        .review-slider {
+            display: flex;
+            gap: 30px;
+            width: max-content;
+            /* FIXED WIDTH */
+        }
+
+        /* CARD */
+
+        .review-card {
+            width: 350px;
+            /* FIXED CARD WIDTH */
+            flex-shrink: 0;
+
+            background: white;
+            border-radius: 14px;
+            padding: 22px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        /* HEADER */
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #673ab7;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            margin-right: 12px;
+        }
+
+        .user-name {
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .review-time {
+            font-size: 12px;
+            color: #777;
+        }
+
+        .google-icon {
+            width: 60px;
+            height: 50px;
+        }
+
+        /* STARS */
+
+        .testi-stars {
+            margin: 14px 0 10px;
+            color: #fbbc05;
+            font-size: 16px;
+        }
+
+        /* ===============================
+   TEXT (2 LINES)
+=============================== */
+
+        .review-text {
+            font-size: 14px;
+            color: #444;
+            line-height: 1.6;
+
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .review-text.expanded {
+            -webkit-line-clamp: unset;
+        }
+
+        /* READ MORE */
+
+        .read-more {
+            font-size: 13px;
+            color: #777;
+            margin-top: 10px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:1000px) {
+
+            .review-card {
+                width: 300px;
+            }
+
+        }
+
+        @media(max-width:600px) {
+
+            .review-card {
+                width: 260px;
+            }
+
+        }
+
+        /* =========================
+    RESPONSIVE FIX (NO UI CHANGE)
+    ========================= */
+
+        /* Tablet */
+        @media (max-width: 1024px) {
+
+            nav {
+                padding: 16px 30px;
+            }
+
+            .hero-inner {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .slider-wrap {
+                height: 450px;
+            }
+
+            .hero {
+                padding: 120px 30px 60px;
+            }
+
+            .services-section {
+                padding: 0 30px 40px;
+                gap: 60px;
+            }
+
+            .service-row {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .service-row.reverse {
+                direction: ltr;
+            }
+
+            .service-image {
+                height: 350px;
+            }
+
+            .gallery-section {
+                padding: 80px 30px;
+            }
+
+            .masonry {
+                columns: 2;
+            }
+
+            .cta-section {
+                padding: 100px 30px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .cta-stats {
+                gap: 30px;
+                flex-wrap: wrap;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+
+            nav {
+                padding: 14px 20px;
+            }
+
+            .nav-links {
+                display: none;
+                /* (optional: later you can add hamburger) */
+            }
+
+            .hero {
+                padding: 100px 20px 50px;
+            }
+
+            .hero-title {
+                font-size: 1.9rem;
+            }
+
+            .slider-wrap {
+                height: 300px;
+            }
+
+            .hero-content-row {
+                flex-direction: column;
+            }
+
+            .hero-side-img {
+                width: 100%;
+                max-width: 200px;
+            }
+
+            .services-section {
+                padding: 0 20px 40px;
+            }
+
+            .service-image {
+                height: 260px;
+            }
+
+            .service-name {
+                font-size: 1.6rem;
+            }
+
+            .gallery-section {
+                padding: 60px 20px;
+            }
+
+            .masonry {
+                columns: 1;
+            }
+
+            .cta-section {
+                padding: 80px 20px;
+            }
+
+            .cta-title {
+                font-size: 2rem;
+            }
+
+            .cta-stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            footer {
+                padding: 50px 20px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+
+        /* Small Mobile */
+        @media (max-width: 480px) {
+
+            .hero-title {
+                font-size: 1.6rem;
+            }
+
+            .service-num {
+                font-size: 2.5rem;
+            }
+
+            .btn-primary {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .btn-white {
+                width: 100%;
+                justify-content: center;
             }
         }
     </style>
@@ -1017,27 +1328,32 @@
             <!-- About text -->
             <div class="hero-right">
                 <span class="hero-tag">Toronto, Ontario, Canada</span>
-                <h1 class="hero-title">Maternity and Newborn<br>Photography in <em>Toronto</em></h1>
+                <h1 class="hero-title">ABOUT MY PHOTOGRAPHY JOURNEY.. <br>Hello, amazing <em>people !</em></h1>
 
-                <div class="hero-content-row">
+                <div class="hero-content-row" style="display: flex;align-items: start;">
                     <div class="hero-texts">
-                        <p class="hero-body">Every <strong>maternity</strong> journey deserves to be honoured — the
-                            glow, the anticipation, the quiet wonder of life becoming. I create timeless portraits that
-                            hold your story forever.</p>
-                        <p class="hero-body">Specialising in <strong>newborn</strong> photography, I capture those
-                            fleeting first days — the tiny yawns, the curled fingers, the impossible softness of a brand
-                            new life. Sessions held in my warm, safe Toronto studio.</p>
-                        <p class="hero-body">From <strong>family</strong> portraits to Cake Smash celebrations, every
-                            milestone deserves a photograph worthy of a lifetime on your wall.</p>
+                        <p class="hero-body">I am a professional and certified Maternity, Newborn, and Child
+                            Photographer who transitioned from a successful career as a Software Engineer to pursue the
+                            artistic path that has always inspired me.</p>
+                        <p class="hero-body">Certified under renowned and ace fashion photographer Karthik Srinivasan at
+                            KAPA and further trained by Amrita Samant (MommyShots by Amrita) a pioneer in the maternity
+                            and child photography industry.</p>
+                        <p class="hero-body">For me, photography is more than a profession, it is a deeply rooted
+                            passion that inspires me to create timeless, meaningful pictures for every family I work
+                            with.</p>
+                        <a href="#about" class="btn-primary">More About<svg width="16" height="16" viewBox="0 0 16 16"
+                                fill="none">
+                                <path d="M3 8h10M8 3l5 5-5 5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a>
+                    </div>
+
+                    <div>
+                        <img src="twilightauthor.webp" alt="owner" style="width: 200px; ">
                     </div>
                 </div>
 
-                <div class="service-tabs">
-                    <a href="#maternity"><button class="tab-btn active" onclick="setTab(this) ">Maternity</button></a>
-                    <a href="#newborn"><button class="tab-btn" onclick="setTab(this)">Newborn</button></a>
-                    <a href="#cake"><button class="tab-btn" onclick="setTab(this)">Cake Smash</button></a>
-                    <a href="#family"><button class="tab-btn" onclick="setTab(this)">Family</button></a>
-                </div>
+
             </div>
 
         </div>
@@ -1335,6 +1651,190 @@
         </div>
     </section>
 
+    <!-- SECTION 5: testimonial -->
+    <section class="review-section">
+
+        <div class="gallery-header fade-up">
+            <span class="section-eyebrow" style="justify-content:center;">The Reviews</span>
+            <h2 class="section-title">Captured <em>Testimonials</em></h2>
+            <p class="gallery-subtitle">Each photograph is a heartbeat frozen in time — a whisper of love you can hold
+                in your hands and pass down through generations.</p>
+        </div>
+
+        <div class="slider-wrapper">
+
+            <div class="review-slider" id="reviewSlider">
+
+                <!-- CARD 1 -->
+
+                <div class="review-card">
+
+                    <div class="review-header">
+
+                        <div class="user-info">
+
+                            <div class="avatar" style="background:#ec407a">E</div>
+
+                            <div>
+
+                                <div class="user-name">Viji</div>
+
+                                <div class="review-time">11 months ago</div>
+
+                            </div>
+
+                        </div>
+
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+                            class="google-icon">
+
+                    </div>
+
+                    <div class="testi-stars">★★★★★</div>
+
+                    <div class="review-text">
+                        Hey Suji, your work was really awesome. You made my little one comfortable, and we loved your
+                        creativity and theme ideas. On the whole, we enjoyed it. Keep rocking! All the best for your
+                        future endeavors.
+                    </div>
+
+                    <div class="read-more" onclick="toggleText(this)">
+                        Read more
+                    </div>
+
+                </div>
+
+
+                <!-- CARD 2 -->
+
+                <div class="review-card">
+
+                    <div class="review-header">
+
+                        <div class="user-info">
+
+                            <div class="avatar" style="background:#e53935">M</div>
+
+                            <div>
+
+                                <div class="user-name">Jerry Christopher</div>
+
+                                <div class="review-time">12 months ago</div>
+
+                            </div>
+
+                        </div>
+
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+                            class="google-icon">
+
+                    </div>
+
+                    <div class="testi-stars">★★★★★</div>
+
+                    <div class="review-text">
+                        Ivaan’s first photoshoot!!!!!! It was our kid’s first year Christmas shoot. Photoshoots with
+                        toddlers are not an easy task. Even though the shoot was booked for 2 hours, it lasted up to 4
+                        hours. With much patience, she took the pics not until we were satisfied, but until she was
+                        satisfied. It came out very well. Being the first photoshoot, the pics came out so well that it
+                        will be a remarkable one and we shall cherish the moments even when he is grown up. The irony is
+                        she delivered the pics before the requested date and surprised us. Highly recommended!!!!!
+                    </div>
+
+                    <div class="read-more" onclick="toggleText(this)">
+                        Read more
+                    </div>
+
+                </div>
+
+
+                <!-- CARD 3 -->
+
+                <div class="review-card">
+
+                    <div class="review-header">
+
+                        <div class="user-info">
+
+                            <div class="avatar" style="background:#6a1b9a">F</div>
+
+                            <div>
+
+                                <div class="user-name">Kiran</div>
+
+                                <div class="review-time">11 months ago</div>
+
+                            </div>
+
+                        </div>
+
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+                            class="google-icon">
+
+                    </div>
+
+                    <div class="testi-stars">★★★★★</div>
+
+                    <div class="review-text">
+                        Hey Suji..! Thanks for the amazing pictures! We had a very tight schedule and did not have much
+                        time, but you still managed to capture amazing pictures that made us feel really happy. The
+                        pictures came out very beautifully. We had a lot of fun during the shoot. My wife was very happy
+                        with the photos.
+
+                        You did a great job. Thanks! Overall, I’m just really happy with this experience.
+                    </div>
+
+                    <div class="read-more" onclick="toggleText(this)">
+                        Read more
+                    </div>
+
+                </div>
+
+                <div class="review-card">
+
+                    <div class="review-header">
+
+                        <div class="user-info">
+
+                            <div class="avatar" style="background:#6a1b9a">F</div>
+
+                            <div>
+
+                                <div class="user-name">Sonam</div>
+
+                                <div class="review-time">11 months ago</div>
+
+                            </div>
+
+                        </div>
+
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+                            class="google-icon">
+
+                    </div>
+
+                    <div class="testi-stars">★★★★★</div>
+
+                    <div class="review-text">
+                        Our maternity shoot was really a great experience. I think you’re very good at what you do! You
+                        provided new poses, and I liked them all. I was very comfortable on my end. The video was very
+                        beautiful, and the pics are great!”
+
+                        Thank you so much..
+                    </div>
+
+                    <div class="read-more" onclick="toggleText(this)">
+                        Read more
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
     <!-- FOOTER -->
     <footer>
         <div class="footer-grid">
@@ -1349,7 +1849,7 @@
                                 d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5zm0 6.5A1.5 1.5 0 1 1 8 4a1.5 1.5 0 0 1 0 3.5z"
                                 fill="rgba(255,255,255,0.5)" />
                         </svg>
-                        Toronto, Ontario, Canada
+                        Canada
                     </div>
                     <div class="contact-item">
                         <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
@@ -1357,7 +1857,7 @@
                                 d="M2 2h12a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm6 7L2.5 4h11L8 9z"
                                 fill="rgba(255,255,255,0.5)" />
                         </svg>
-                        hello@bloomandbare.ca
+                        twilightmemoriesphotography@gmail.com
                     </div>
                     <div class="contact-item">
                         <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
@@ -1365,7 +1865,7 @@
                                 d="M3 2a1 1 0 0 1 1-1h2l1 3-1.5 1.5A10 10 0 0 0 9.5 9L11 7.5l3 1v2a1 1 0 0 1-1 1A12 12 0 0 1 2 3z"
                                 fill="rgba(255,255,255,0.5)" />
                         </svg>
-                        +1 (416) 555-0192
+                        +1 4379935392
                     </div>
                 </div>
                 <div class="social-row">
@@ -1424,7 +1924,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <span>© 2025 Bloom & Bare Photography. Toronto, Ontario, Canada.</span>
+            <span>© 2026 Twilight Memories Photography. Canada.</span>
             <span>Privacy Policy &nbsp;·&nbsp; Terms of Service</span>
         </div>
     </footer>
@@ -1502,6 +2002,76 @@
 
             balloonsContainer.appendChild(balloon);
         }
+
+        /* ======================
+        READ MORE
+     ====================== */
+
+        function toggleText(btn) {
+
+            let text = btn.previousElementSibling;
+
+            text.classList.toggle("expanded");
+
+            btn.innerText =
+                text.classList.contains("expanded")
+                    ? "Read less"
+                    : "Read more";
+
+        }
+
+        /* ======================
+           INFINITE AUTO SCROLL
+        ====================== */
+
+        const slider = document.getElementById("reviewSlider");
+
+        /* Clone cards */
+
+        const cards = Array.from(slider.children);
+
+        cards.forEach(card => {
+
+            const clone = card.cloneNode(true);
+
+            slider.appendChild(clone);
+
+        });
+
+        let scrollPos = 0;
+        let speed = 0.5;
+
+        function autoScroll() {
+
+            scrollPos += speed;
+
+            if (scrollPos >= slider.scrollWidth / 2) {
+
+                scrollPos = 0;
+
+            }
+
+            slider.style.transform = `translateX(-${scrollPos}px)`;
+
+        }
+
+        /* Start */
+
+        let auto = setInterval(autoScroll, 16);
+
+        /* Pause on hover */
+
+        slider.addEventListener("mouseenter", () => {
+
+            clearInterval(auto);
+
+        });
+
+        slider.addEventListener("mouseleave", () => {
+
+            auto = setInterval(autoScroll, 16);
+
+        });
     </script>
 </body>
 
