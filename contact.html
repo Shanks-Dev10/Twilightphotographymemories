@@ -43,7 +43,7 @@
             font-weight: 300;
         }
 
-        /* ─── NAV ─── */
+        /* NAV */
         nav {
             position: fixed;
             top: 0;
@@ -88,8 +88,7 @@
             transition: color 0.2s;
         }
 
-        .nav-links a:hover,
-        .nav-links a.active {
+        .nav-links a:hover {
             color: var(--teal);
         }
 
@@ -1261,9 +1260,6 @@
                 padding: 16px 30px;
             }
 
-            .nav-links {
-                display: none;
-            }
 
             /* Hero */
             .page-hero {
@@ -1375,6 +1371,40 @@
                 padding: 5px 10px;
             }
         }
+
+        /* HAMBURGER */
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* MOBILE MENU */
+        @media (max-width: 1024px) {
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: var(--beige);
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                padding: 20px 0;
+                transform: translateY(-120%);
+                transition: 0.3s ease;
+            }
+
+            .nav-links.active {
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 
@@ -1384,10 +1414,18 @@
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
 
-    <!-- ─── NAV ─── -->
+    <!-- NAV -->
     <nav>
-        <a href="#" class="nav-logo"><img src="watermark-black-tm-copy-2.png" alt="logo" style="width: 150px;"></a>
-        <ul class="nav-links">
+        <a href="#" class="nav-logo">
+            <img src="watermark-black-tm-copy-2.png" alt="logo" style="width: 150px;">
+        </a>
+
+        <!-- NEW HAMBURGER -->
+        <div class="menu-toggle" id="menuToggle">
+            ☰
+        </div>
+
+        <ul class="nav-links" id="navLinks">
             <li><a href="index.html">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="service.html">Maternity</a></li>
@@ -1951,6 +1989,13 @@
             document.getElementById('btnLoader').style.display = 'none';
             btn.style.background = '';
         }
+
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
+
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
     </script>
     <style>
         @keyframes shake {

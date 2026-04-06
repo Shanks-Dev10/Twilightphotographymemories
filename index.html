@@ -931,8 +931,9 @@
         /* Container */
         .stars,
         .hearts,
-        .balloons {
-            position: fixed;
+        .balloons,
+        .familys {
+            /* position: fixed; */
             inset: 0;
             pointer-events: none;
             z-index: 1;
@@ -941,7 +942,8 @@
         /* Star style */
         .stars span,
         .hearts span,
-        .balloons span {
+        .balloons span,
+        .familys span {
             position: absolute;
             top: -10px;
             color: #fff;
@@ -1087,6 +1089,21 @@
             font-weight: 500;
         }
 
+        .image-group {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* keep stars inside only image group */
+        .image-group .stars {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 2;
+        }
+
         /* RESPONSIVE */
 
         @media(max-width:1000px) {
@@ -1135,13 +1152,10 @@
             }
 
             .service-row {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 1fr;
                 gap: 40px;
             }
 
-            .service-row.reverse {
-                direction: ltr;
-            }
 
             .service-image {
                 height: 350px;
@@ -1176,10 +1190,6 @@
                 padding: 14px 20px;
             }
 
-            .nav-links {
-                display: none;
-                /* (optional: later you can add hamburger) */
-            }
 
             .hero {
                 padding: 100px 20px 50px;
@@ -1205,6 +1215,8 @@
             .services-section {
                 padding: 0 20px 40px;
             }
+
+
 
             .service-image {
                 height: 260px;
@@ -1249,6 +1261,17 @@
                 gap: 10px;
                 text-align: center;
             }
+
+            .hero-img {
+                display: none;
+            }
+
+            .stars,
+            .hearts,
+            .balloons,
+            .familys {
+                display: none;
+            }
         }
 
         /* Small Mobile */
@@ -1271,6 +1294,48 @@
                 width: 100%;
                 justify-content: center;
             }
+
+            .service-row {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .service-badge{
+                padding: 6px 11px;
+            }
+        }
+
+        /* HAMBURGER */
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* MOBILE MENU */
+        @media (max-width: 1024px) {
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: var(--beige);
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                padding: 20px 0;
+                transform: translateY(-120%);
+                transition: 0.3s ease;
+            }
+
+            .nav-links.active {
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
@@ -1279,8 +1344,16 @@
 
     <!-- NAV -->
     <nav>
-        <a href="#" class="nav-logo"><img src="watermark-black-tm-copy-2.png" alt="logo" style="width: 150px;"></a>
-        <ul class="nav-links">
+        <a href="#" class="nav-logo">
+            <img src="watermark-black-tm-copy-2.png" alt="logo" style="width: 150px;">
+        </a>
+
+        <!-- NEW HAMBURGER -->
+        <div class="menu-toggle" id="menuToggle">
+            ☰
+        </div>
+
+        <ul class="nav-links" id="navLinks">
             <li><a href="index.html">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="service.html">Maternity</a></li>
@@ -1348,7 +1421,7 @@
                             </svg></a>
                     </div>
 
-                    <div>
+                    <div class="hero-img">
                         <img src="twilightauthor.webp" alt="owner" style="width: 200px; ">
                     </div>
                 </div>
@@ -1370,20 +1443,22 @@
             <!-- 1. Maternity — image LEFT -->
 
             <div class="service-row fade-up" style="overflow: hidden;" id="maternity">
-                <div style="display: flex;align-items: center;gap: 20px;">
-                    <div class="service-image" style="height: 300px;">
-                        <img src="maternity1.jpg" alt="Maternity photography session"
-                            onerror="this.parentElement.style.background='linear-gradient(145deg,#D4C2B0,#A89080)'" />
-                        <div class="service-img-overlay"></div>
+                <div class="image-group">
 
+                    <div class="service-image" style="height: 300px;">
+                        <img src="maternity1.jpg" alt="">
+                        <div class="service-img-overlay"></div>
                     </div>
+
                     <div class="service-image">
-                        <img src="maternity2.jpg" alt="Maternity photography session"
-                            onerror="this.parentElement.style.background='linear-gradient(145deg,#D4C2B0,#A89080)'" />
+                        <img src="maternity2.jpg" alt="">
                         <div class="service-img-overlay"></div>
                         <span class="service-badge">✦ Maternity</span>
                     </div>
+
+                    <!-- ⭐ MOVE HERE -->
                     <div class="stars"></div>
+
                 </div>
                 <div class="service-text">
                     <span class="service-num">01</span>
@@ -1406,26 +1481,25 @@
                 </div>
             </div>
 
-
             <!-- 2. Newborn — image RIGHT -->
             <div class="service-row reverse fade-up" style="overflow: hidden;" id="newborn">
-                <div class="hearts"></div>
-                <div style="display: flex;align-items: center;gap: 20px;">
-                    <div class="service-image" style="height: 300px;">
-                        <img src="newborn.jpg" alt="Maternity photography session"
-                            onerror="this.parentElement.style.background='linear-gradient(145deg,#D4C2B0,#A89080)'" />
-                        <div class="service-img-overlay"></div>
+                <div class="image-group">
 
+                    <div class="service-image" style="height: 300px;">
+                        <img src="newborn.jpg" alt="">
+                        <div class="service-img-overlay"></div>
                     </div>
+
                     <div class="service-image">
-                        <img src="newborn1.jpg" alt="Maternity photography session"
-                            onerror="this.parentElement.style.background='linear-gradient(145deg,#D4C2B0,#A89080)'" />
+                        <img src="newborn1.jpg" alt="">
                         <div class="service-img-overlay"></div>
                         <span class="service-badge">✦ New Born</span>
                     </div>
-                    <div class="stars"></div>
+
+                    <!-- ⭐ MOVE HERE -->
+                    <div class="hearts"></div>
+
                 </div>
-                <div class="hearts"></div>
                 <div class="service-text">
                     <span class="service-num">02</span>
                     <h3 class="service-name">Newborn <em>Portraits</em></h3>
@@ -1448,20 +1522,22 @@
 
             <!-- 3. Cake Smash — image LEFT -->
             <div class="service-row fade-up" style="overflow: hidden;" id="cake">
-                <div style="display: flex;align-items: center;gap: 20px;">
-                    <div class="service-image" style="height: 300px;">
-                        <img src="cakesmash.jpg" alt="Maternity photography session"
-                            onerror="this.parentElement.style.background='linear-gradient(145deg,#D4C2B0,#A89080)'" />
-                        <div class="service-img-overlay"></div>
+                <div class="image-group">
 
+                    <div class="service-image" style="height: 300px;">
+                        <img src="cakesmash.jpg" alt="">
+                        <div class="service-img-overlay"></div>
                     </div>
+
                     <div class="service-image">
-                        <img src="cakesmash1.jpg" alt="Maternity photography session"
-                            onerror="this.parentElement.style.background='linear-gradient(145deg,#D4C2B0,#A89080)'" />
+                        <img src="cakesmash1.jpg" alt="">
                         <div class="service-img-overlay"></div>
                         <span class="service-badge">✦ Cake Smash</span>
                     </div>
+
+                    <!-- ⭐ MOVE HERE -->
                     <div class="balloons"></div>
+
                 </div>
                 <div class="service-text">
                     <span class="service-num">03</span>
@@ -1485,20 +1561,22 @@
 
             <!-- 4. Family — image RIGHT -->
             <div class="service-row reverse fade-up" id="family">
-                <div style="display: flex;align-items: center;gap: 20px;">
-                    <div class="service-image" style="height: 300px;">
-                        <img src="families1.jpg" alt="Maternity photography session"
-                            onerror="this.parentElement.style.background='linear-gradient(145deg,#D4C2B0,#A89080)'" />
-                        <div class="service-img-overlay"></div>
+                <div class="image-group">
 
+                    <div class="service-image" style="height: 300px;">
+                        <img src="families1.jpg" alt="">
+                        <div class="service-img-overlay"></div>
                     </div>
+
                     <div class="service-image">
-                        <img src="family.jpg" alt="Maternity photography session"
-                            onerror="this.parentElement.style.background='linear-gradient(145deg,#D4C2B0,#A89080)'" />
+                        <img src="family.jpg" alt="">
                         <div class="service-img-overlay"></div>
                         <span class="service-badge">✦ Family</span>
                     </div>
-                    <div class="stars"></div>
+
+                    <!-- ⭐ MOVE HERE -->
+                    <div class="familys"></div>
+
                 </div>
                 <div class="service-text">
                     <span class="service-num">04</span>
@@ -1964,44 +2042,83 @@
 
         document.querySelectorAll('.fade-up, .service-row').forEach(el => obs.observe(el));
 
-        const starsContainer = document.querySelector('.stars');
+        const starsContainers = document.querySelectorAll('.stars');
 
-        for (let i = 0; i < 100; i++) {
-            let star = document.createElement('span');
-            star.innerHTML = "⭐";
+        starsContainers.forEach(container => {
 
-            star.style.left = Math.random() * 100 + "vw";
-            star.style.animationDuration = (Math.random() * 3 + 2) + "s";
-            star.style.fontSize = (Math.random() * 10 + 10) + "px";
+            for (let i = 0; i < 30; i++) {
 
-            starsContainer.appendChild(star);
-        }
+                let star = document.createElement('span');
+                star.innerHTML = "⭐";
 
-        const heartsContainer = document.querySelector('.hearts');
+                // IMPORTANT: use % instead of vw
+                star.style.left = Math.random() * 100 + "%";
+                star.style.animationDuration = (Math.random() * 3 + 2) + "s";
+                star.style.fontSize = (Math.random() * 10 + 10) + "px";
 
-        for (let i = 0; i < 100; i++) {
-            let heart = document.createElement('span');
-            heart.innerHTML = "💗";
+                container.appendChild(star);
+            }
 
-            heart.style.left = Math.random() * 100 + "vw";
-            heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
-            heart.style.fontSize = (Math.random() * 10 + 10) + "px";
+        });
 
-            heartsContainer.appendChild(heart);
-        }
 
-        const balloonsContainer = document.querySelector('.balloons');
+        const heartsContainers = document.querySelectorAll('.hearts');
 
-        for (let i = 0; i < 100; i++) {
-            let balloon = document.createElement('span');
-            balloon.innerHTML = "🎈";
+        heartsContainers.forEach(container => {
 
-            balloon.style.left = Math.random() * 100 + "vw";
-            balloon.style.animationDuration = (Math.random() * 3 + 2) + "s";
-            balloon.style.fontSize = (Math.random() * 10 + 10) + "px";
+            for (let i = 0; i < 30; i++) {
 
-            balloonsContainer.appendChild(balloon);
-        }
+                let heart = document.createElement('span');
+                heart.innerHTML = "💗";
+
+                // IMPORTANT: use % instead of vw
+                heart.style.left = Math.random() * 100 + "%";
+                heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+                heart.style.fontSize = (Math.random() * 10 + 10) + "px";
+
+                container.appendChild(heart);
+            }
+
+        });
+
+
+        const balloonsContainers = document.querySelectorAll('.balloons');
+
+        balloonsContainers.forEach(container => {
+
+            for (let i = 0; i < 30; i++) {
+
+                let balloon = document.createElement('span');
+                balloon.innerHTML = "🎈";
+
+                // IMPORTANT: use % instead of vw
+                balloon.style.left = Math.random() * 100 + "%";
+                balloon.style.animationDuration = (Math.random() * 3 + 2) + "s";
+                balloon.style.fontSize = (Math.random() * 10 + 10) + "px";
+
+                container.appendChild(balloon);
+            }
+
+        });
+
+        const familysContainers = document.querySelectorAll('.familys');
+
+        familysContainers.forEach(container => {
+
+            for (let i = 0; i < 30; i++) {
+
+                let family = document.createElement('span');
+                family.innerHTML = "💑";
+
+                // IMPORTANT: use % instead of vw
+                family.style.left = Math.random() * 100 + "%";
+                family.style.animationDuration = (Math.random() * 3 + 2) + "s";
+                family.style.fontSize = (Math.random() * 10 + 10) + "px";
+
+                container.appendChild(family);
+            }
+
+        });
 
         /* ======================
         READ MORE
@@ -2072,6 +2189,15 @@
             auto = setInterval(autoScroll, 16);
 
         });
+
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
+
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+
+
     </script>
 </body>
 
