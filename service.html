@@ -341,8 +341,8 @@
 
         .collage-badge {
             position: absolute;
-            bottom: 14%;
-            left: 62%;
+            top: 0;
+            left: 0;
             transform: translateX(-50%);
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
@@ -1237,7 +1237,7 @@
 
         /* CTA */
         .cta-section {
-            padding: 120px 60px;
+            padding: 30px 60px;
             background: linear-gradient(135deg, #1E3E40 0%, #2F6F73 40%, #3D8C91 100%);
             position: relative;
             overflow: hidden;
@@ -1828,10 +1828,12 @@
 
     <!-- SERVICE NAV TABS -->
     <div class="service-nav" style="margin-top: 100px;">
-        <a href="#" class="active">✦ Maternity</a>
-        <a href="#">✦ Newborn</a>
-        <a href="#">✦ Cake Smash</a>
-        <a href="#">✦ Family</a>
+        <a href="#" class="active">✦ Your Photographer</a>
+        <a href="#">✦ The Process</a>
+        <a href="#">✦ The Gallery</a>
+        <a href="#">✦ Styling Guide</a>
+        <a href="#">✦ Pricing</a>
+        <a href="#">✦ Faq</a>
     </div>
 
     <!-- BREADCRUMB -->
@@ -1883,19 +1885,8 @@
 
             <!-- RIGHT: COLLAGE -->
             <div class="hero-collage fade-up">
-                <div class="collage-main">
-                    <img src='maternity1.jpg' alt="Maternity portrait"
-                        onerror="this.parentElement.style.background='linear-gradient(135deg,#D4C5B8,#A89070)'" />
-                </div>
-                <div class="collage-accent">
-                    <img src="https://images.pexels.com/photos/1648387/pexels-photo-1648387.jpeg?auto=compress&cs=tinysrgb&w=600"
-                        alt="Maternity detail"
-                        onerror="this.parentElement.style.background='linear-gradient(135deg,#BDD0C8,#5A827C)'" />
-                </div>
-                <div class="collage-accent2">
-                    <img src="https://images.pexels.com/photos/35537/child-children-girl-happy.jpg?auto=compress&cs=tinysrgb&w=500"
-                        alt="Family joy"
-                        onerror="this.parentElement.style.background='linear-gradient(135deg,#D9CFC8,#9A8880)'" />
+                <div>
+                    <img src="assets/maternity/sevice-maternity.png" alt="">
                 </div>
                 <div class="collage-badge">✦ Toronto Studio & Outdoor</div>
             </div>
@@ -1907,13 +1898,11 @@
         <div class="about-inner">
             <div class="about-image-stack fade-up">
                 <div class="stack-img1">
-                    <img src="https://images.pexels.com/photos/3996302/pexels-photo-3996302.jpeg?auto=compress&cs=tinysrgb&w=800"
-                        alt="Photography studio"
+                    <img src="assets/maternity/maternity1.webp" alt="Photography studio"
                         onerror="this.parentElement.style.background='linear-gradient(135deg,#D4C5B8,#A89070)'" />
                 </div>
                 <div class="stack-img2">
-                    <img src="https://images.pexels.com/photos/1648387/pexels-photo-1648387.jpeg?auto=compress&cs=tinysrgb&w=600"
-                        alt="Maternity glow"
+                    <img src="assets/family/family1.webp" alt="Maternity glow"
                         onerror="this.parentElement.style.background='linear-gradient(135deg,#BDD0C8,#5A827C)'" />
                 </div>
                 <div class="about-pull">
@@ -2014,38 +2003,65 @@
             <p class="gallery-sub">A glimpse into the radiant, intimate world of maternity photography — each image a
                 testament to the beauty of becoming.</p>
         </div>
-        <div class="masonry" style="margin-top:40px;">
+
+
+        <!-- Masonry with real images -->
+        <div class="masonry" style="margin-top:50px;">
+
             <div class="masonry-item fade-up">
-                <img src="maternity1.jpg" alt="Maternity session" style="height:300px;object-fit:cover;"
-                    onerror="this.src='https://images.pexels.com/photos/3996302/pexels-photo-3996302.jpeg?auto=compress&cs=tinysrgb&w=600'; this.style.height='300px';" />
-                <div class="overlay"><span class="overlay-text">Flowing elegance</span></div>
+                <img src="assets/maternity/maternity3.webp" alt="Newborn baby" style="height:290px;object-fit:cover;"
+                    onerror="this.style.height='290px'" />
+                <div class="overlay"><span class="overlay-text">First hello</span></div>
             </div>
+
             <div class="masonry-item fade-up">
-                <img src="maternity2.jpg" alt="Maternity glow"
-                    style="height:380px;object-fit:cover;object-position:top;"
-                    onerror="this.src='https://images.pexels.com/photos/1648387/pexels-photo-1648387.jpeg?auto=compress&cs=tinysrgb&w=600'; this.style.height='380px';" />
+                <img src="assets/newborn/newborn3.webp" alt="Maternity glow"
+                    style="height:390px;object-fit:cover;object-position:top;" onerror="this.style.height='390px'" />
                 <div class="overlay"><span class="overlay-text">Mama's warmth</span></div>
             </div>
+
             <div class="masonry-item fade-up">
-                <img src="matrnity.jpg" alt="Maternity outdoor" style="height:320px;object-fit:cover;"
-                    onerror="this.src='https://images.pexels.com/photos/35537/child-children-girl-happy.jpg?auto=compress&cs=tinysrgb&w=600'; this.style.height='320px';" />
-                <div class="overlay"><span class="overlay-text">Golden hour</span></div>
+                <img src="assets/cakesmash/cakesmash3.webp" alt="Happy child" style="height:310px;object-fit:cover;"
+                    onerror="this.style.height='310px'" />
+                <div class="overlay"><span class="overlay-text">Pure joy</span></div>
             </div>
+
             <div class="masonry-item fade-up">
-                <img src="families.jpg" alt="Family love" style="height:350px;object-fit:cover;"
-                    onerror="this.src='https://images.pexels.com/photos/3996302/pexels-photo-3996302.jpeg?auto=compress&cs=tinysrgb&w=600&h=700'; this.style.height='350px';" />
+                <img src="assets/family/family3.webp" alt="Family portrait" style="height:350px;object-fit:cover;"
+                    onerror="this.style.height='350px'" />
                 <div class="overlay"><span class="overlay-text">Together always</span></div>
             </div>
+
             <div class="masonry-item fade-up">
-                <img src="newborn.jpg" alt="Newborn joy" style="height:260px;object-fit:cover;"
-                    onerror="this.src='https://images.pexels.com/photos/1648387/pexels-photo-1648387.jpeg?auto=compress&cs=tinysrgb&w=600'; this.style.height='260px';" />
-                <div class="overlay"><span class="overlay-text">Pure love</span></div>
+                <img src="assets/maternity/maternity1.webp" alt="Baby first birthday"
+                    style="height:270px;object-fit:cover;" onerror="this.style.height='270px'" />
+                <div class="overlay"><span class="overlay-text">One year old</span></div>
             </div>
+
             <div class="masonry-item fade-up">
-                <img src="family.jpg" alt="Family portrait" style="height:410px;object-fit:cover;"
-                    onerror="this.src='https://images.pexels.com/photos/35537/child-children-girl-happy.jpg?auto=compress&cs=tinysrgb&w=600'; this.style.height='410px';" />
+                <img src="assets/newborn/newborn.webp" alt="Mother and newborn" style="height:400px;object-fit:cover;"
+                    onerror="this.style.height='400px'" />
                 <div class="overlay"><span class="overlay-text">Bloom & grow</span></div>
             </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/cakesmash/cakesmash.webp" alt="Newborn sleeping" style="height:280px;object-fit:cover;"
+                    onerror="this.style.height='280px'" />
+                <div class="overlay"><span class="overlay-text">Sweet dreams</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/family/family.webp" alt="Family love" style="height:360px;object-fit:cover;"
+                    onerror="this.style.height='360px'" />
+                <div class="overlay"><span class="overlay-text">Family love</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/newborn/newborn2.webp" alt="Baby tiny feet" style="height:300px;object-fit:cover;"
+                    onerror="this.style.height='300px'" />
+                <div class="overlay"><span class="overlay-text">Tiny toes</span></div>
+            </div>
+
         </div>
     </section>
 
@@ -2059,8 +2075,7 @@
             <div class="wardrobe-grid">
                 <div class="wardrobe-card fade-up">
                     <div class="wardrobe-card-img">
-                        <img src="https://images.pexels.com/photos/3996302/pexels-photo-3996302.jpeg?auto=compress&cs=tinysrgb&w=600"
-                            alt="Studio gowns"
+                        <img src="assets/maternity/maternity3.webp" alt="Studio gowns"
                             onerror="this.parentElement.style.background='linear-gradient(135deg,#D4C5B8,#A89070)'" />
                     </div>
                     <div class="wardrobe-card-body">
@@ -2072,8 +2087,7 @@
                 </div>
                 <div class="wardrobe-card fade-up">
                     <div class="wardrobe-card-img">
-                        <img src="https://images.pexels.com/photos/1648387/pexels-photo-1648387.jpeg?auto=compress&cs=tinysrgb&w=600"
-                            alt="Fitted style"
+                        <img src="assets/family/family1.webp" alt="Fitted style"
                             onerror="this.parentElement.style.background='linear-gradient(135deg,#BDD0C8,#5A827C)'" />
                     </div>
                     <div class="wardrobe-card-body">
@@ -2085,8 +2099,7 @@
                 </div>
                 <div class="wardrobe-card fade-up">
                     <div class="wardrobe-card-img">
-                        <img src="https://images.pexels.com/photos/35537/child-children-girl-happy.jpg?auto=compress&cs=tinysrgb&w=600"
-                            alt="Partner styling"
+                        <img src="assets/cakesmash/cakesmash.webp" alt="Partner styling"
                             onerror="this.parentElement.style.background='linear-gradient(135deg,#D9CFC8,#9A8880)'" />
                     </div>
                     <div class="wardrobe-card-body">
@@ -2156,7 +2169,7 @@
                         <li>Wardrobe styling guide</li>
                         <li>Client closet access</li>
                     </ul>
-                    <a href="mailto:hello@bloomandbare.ca" class="pkg-btn">Enquire Now</a>
+                    <a href="#" class="pkg-btn">Enquire Now</a>
                 </div>
             </div>
             <!-- Signature — FEATURED -->
@@ -2177,7 +2190,7 @@
                         <li>Partner & sibling portraits</li>
                         <li>1 large fine-art print included</li>
                     </ul>
-                    <a href="mailto:hello@bloomandbare.ca" class="pkg-btn">Book This Session</a>
+                    <a href="#" class="pkg-btn">Book This Session</a>
                 </div>
             </div>
             <!-- Luxe -->
@@ -2198,7 +2211,7 @@
                         <li>Premium album + wall art package</li>
                         <li>Newborn session priority booking</li>
                     </ul>
-                    <a href="mailto:hello@bloomandbare.ca" class="pkg-btn">Enquire Now</a>
+                    <a href="#" class="pkg-btn">Enquire Now</a>
                 </div>
             </div>
         </div>
@@ -2377,7 +2390,7 @@
             <h2 class="cta-title">Let's capture your<br><em>beautiful journey</em></h2>
             <p class="cta-sub">Maternity dates fill quickly — especially spring and autumn. Reach out today and let's
                 create something extraordinary together.</p>
-            <a href="mailto:hello@bloomandbare.ca" class="btn-white">
+            <a href="#" class="btn-white">
                 Book Your Session
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M3 8h10M8 3l5 5-5 5" stroke="var(--teal)" stroke-width="1.5" stroke-linecap="round"

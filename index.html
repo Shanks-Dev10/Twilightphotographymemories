@@ -681,7 +681,7 @@
 
         /* CTA */
         .cta-section {
-            padding: 120px 60px;
+            padding: 30px 60px;
             background: linear-gradient(135deg, #1E3E40 0%, #2F6F73 40%, #3D8C91 100%);
             position: relative;
             overflow: hidden;
@@ -1298,7 +1298,8 @@
                 grid-template-columns: 1fr;
                 gap: 40px;
             }
-            .service-badge{
+
+            .service-badge {
                 padding: 6px 11px;
             }
         }
@@ -1373,27 +1374,34 @@
             <div class="slider-wrap">
 
                 <div class="slide active">
-                    <img src="cakesmash.jpg" alt="Maternity portrait" loading="eager"
+                    <img src="assets/maternity/maternity.webp" alt="Maternity portrait" loading="eager"
                         onerror="this.parentElement.style.background='linear-gradient(135deg,#D4C5B8,#A89070)'" />
                     <div class="slide-overlay"><span class="slide-label">Maternity Portraits</span></div>
                 </div>
 
                 <div class="slide">
-                    <img src="families1.jpg" alt="Newborn baby" loading="lazy"
+                    <img src="assets/newborn/newborn.webp" alt="Newborn baby" loading="lazy"
                         onerror="this.parentElement.style.background='linear-gradient(135deg,#BDD0C8,#5A827C)'" />
                     <div class="slide-overlay"><span class="slide-label">Newborn Sessions</span></div>
                 </div>
 
                 <div class="slide">
-                    <img src="maternity1.jpg" alt="Family portrait" loading="lazy"
+                    <img src="assets/cakesmash/cakesmash.webp" alt="cake smash" loading="lazy"
                         onerror="this.parentElement.style.background='linear-gradient(135deg,#D9CFC8,#9A8880)'" />
-                    <div class="slide-overlay"><span class="slide-label">Family Portraits</span></div>
+                    <div class="slide-overlay"><span class="slide-label">Cake Smash</span></div>
+                </div>
+
+                <div class="slide">
+                    <img src="assets/family/family.webp" alt="cake smash" loading="lazy"
+                        onerror="this.parentElement.style.background='linear-gradient(135deg,#D9CFC8,#9A8890)'" />
+                    <div class="slide-overlay"><span class="slide-label">Family Potraits</span></div>
                 </div>
 
                 <div class="slider-dots">
                     <div class="dot active" data-index="0"></div>
                     <div class="dot" data-index="1"></div>
                     <div class="dot" data-index="2"></div>
+                    <div class="dot" data-index="3"></div>
                 </div>
             </div>
 
@@ -1445,12 +1453,12 @@
                 <div class="image-group">
 
                     <div class="service-image" style="height: 300px;">
-                        <img src="maternity1.jpg" alt="">
+                        <img src="assets/maternity/maternity1.webp" alt="maternity">
                         <div class="service-img-overlay"></div>
                     </div>
 
                     <div class="service-image">
-                        <img src="maternity2.jpg" alt="">
+                        <img src="assets/maternity/maternity2.webp" alt="maternity">
                         <div class="service-img-overlay"></div>
                         <span class="service-badge">✦ Maternity</span>
                     </div>
@@ -1485,12 +1493,12 @@
                 <div class="image-group">
 
                     <div class="service-image" style="height: 300px;">
-                        <img src="newborn.jpg" alt="">
+                        <img src="assets/newborn/newborn1.webp" alt="newborn">
                         <div class="service-img-overlay"></div>
                     </div>
 
                     <div class="service-image">
-                        <img src="newborn1.jpg" alt="">
+                        <img src="assets/newborn/newborn2.webp" alt="newborn">
                         <div class="service-img-overlay"></div>
                         <span class="service-badge">✦ New Born</span>
                     </div>
@@ -1524,12 +1532,12 @@
                 <div class="image-group">
 
                     <div class="service-image" style="height: 300px;">
-                        <img src="cakesmash.jpg" alt="">
+                        <img src="assets/cakesmash/cakesmash2.webp" alt="cakesmash">
                         <div class="service-img-overlay"></div>
                     </div>
 
                     <div class="service-image">
-                        <img src="cakesmash1.jpg" alt="">
+                        <img src="assets/cakesmash/cakesmash3.webp" alt="cakesmash">
                         <div class="service-img-overlay"></div>
                         <span class="service-badge">✦ Cake Smash</span>
                     </div>
@@ -1563,12 +1571,12 @@
                 <div class="image-group">
 
                     <div class="service-image" style="height: 300px;">
-                        <img src="families1.jpg" alt="">
+                        <img src="assets/family/family3.webp" alt="family">
                         <div class="service-img-overlay"></div>
                     </div>
 
                     <div class="service-image">
-                        <img src="family.jpg" alt="">
+                        <img src="assets/family/family2.webp" alt="family">
                         <div class="service-img-overlay"></div>
                         <span class="service-badge">✦ Family</span>
                     </div>
@@ -1636,55 +1644,55 @@
         <div class="masonry" style="margin-top:50px;">
 
             <div class="masonry-item fade-up">
-                <img src="cakesmash.jpg" alt="Newborn baby" style="height:290px;object-fit:cover;"
+                <img src="assets/maternity/maternity3.webp" alt="Newborn baby" style="height:290px;object-fit:cover;"
                     onerror="this.style.height='290px'" />
                 <div class="overlay"><span class="overlay-text">First hello</span></div>
             </div>
 
             <div class="masonry-item fade-up">
-                <img src="cakesmash1.jpg" alt="Maternity glow"
+                <img src="assets/newborn/newborn3.webp" alt="Maternity glow"
                     style="height:390px;object-fit:cover;object-position:top;" onerror="this.style.height='390px'" />
                 <div class="overlay"><span class="overlay-text">Mama's warmth</span></div>
             </div>
 
             <div class="masonry-item fade-up">
-                <img src="families.jpg" alt="Happy child" style="height:310px;object-fit:cover;"
+                <img src="assets/cakesmash/cakesmash3.webp" alt="Happy child" style="height:310px;object-fit:cover;"
                     onerror="this.style.height='310px'" />
                 <div class="overlay"><span class="overlay-text">Pure joy</span></div>
             </div>
 
             <div class="masonry-item fade-up">
-                <img src="families1.jpg" alt="Family portrait" style="height:350px;object-fit:cover;"
+                <img src="assets/family/family3.webp" alt="Family portrait" style="height:350px;object-fit:cover;"
                     onerror="this.style.height='350px'" />
                 <div class="overlay"><span class="overlay-text">Together always</span></div>
             </div>
 
             <div class="masonry-item fade-up">
-                <img src="family.jpg" alt="Baby first birthday" style="height:270px;object-fit:cover;"
+                <img src="assets/maternity/maternity1.webp" alt="Baby first birthday" style="height:270px;object-fit:cover;"
                     onerror="this.style.height='270px'" />
                 <div class="overlay"><span class="overlay-text">One year old</span></div>
             </div>
 
             <div class="masonry-item fade-up">
-                <img src="maternity1.jpg" alt="Mother and newborn" style="height:400px;object-fit:cover;"
+                <img src="assets/newborn/newborn.webp" alt="Mother and newborn" style="height:400px;object-fit:cover;"
                     onerror="this.style.height='400px'" />
                 <div class="overlay"><span class="overlay-text">Bloom & grow</span></div>
             </div>
 
             <div class="masonry-item fade-up">
-                <img src="maternity2.jpg" alt="Newborn sleeping" style="height:280px;object-fit:cover;"
+                <img src="assets/cakesmash/cakesmash.webp" alt="Newborn sleeping" style="height:280px;object-fit:cover;"
                     onerror="this.style.height='280px'" />
                 <div class="overlay"><span class="overlay-text">Sweet dreams</span></div>
             </div>
 
             <div class="masonry-item fade-up">
-                <img src="matrnity.jpg" alt="Family love" style="height:360px;object-fit:cover;"
+                <img src="assets/family/family.webp" alt="Family love" style="height:360px;object-fit:cover;"
                     onerror="this.style.height='360px'" />
                 <div class="overlay"><span class="overlay-text">Family love</span></div>
             </div>
 
             <div class="masonry-item fade-up">
-                <img src="newborn.jpg" alt="Baby tiny feet" style="height:300px;object-fit:cover;"
+                <img src="assets/newborn/newborn2.webp" alt="Baby tiny feet" style="height:300px;object-fit:cover;"
                     onerror="this.style.height='300px'" />
                 <div class="overlay"><span class="overlay-text">Tiny toes</span></div>
             </div>
@@ -1710,21 +1718,21 @@
             <h2 class="cta-title">Let's capture your<br><em>beautiful journey</em></h2>
             <p class="cta-sub">Every session is a collaboration built on trust, warmth, and a shared love for the
                 moments that matter most. I'd be honoured to be part of yours.</p>
-            <a href="mailto:hello@bloomandbare.ca" class="btn-white">
+            <a href="#" class="btn-white">
                 Book Your Session
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M3 8h10M8 3l5 5-5 5" stroke="var(--teal)" stroke-width="1.5" stroke-linecap="round"
                         stroke-linejoin="round" />
                 </svg>
             </a>
-            <div class="cta-stats">
+            <!-- <div class="cta-stats">
                 <div class="stat-item"><span class="stat-num">500+</span><span class="stat-label">Families Served</span>
                 </div>
                 <div class="stat-item"><span class="stat-num">8+</span><span class="stat-label">Years in Toronto</span>
                 </div>
                 <div class="stat-item"><span class="stat-num">100%</span><span class="stat-label">Love Guaranteed</span>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 
@@ -2045,7 +2053,7 @@
 
         starsContainers.forEach(container => {
 
-            for (let i = 0; i < 30; i++) {
+            for (let i = 0; i < 20; i++) {
 
                 let star = document.createElement('span');
                 star.innerHTML = "⭐";
@@ -2065,7 +2073,7 @@
 
         heartsContainers.forEach(container => {
 
-            for (let i = 0; i < 30; i++) {
+            for (let i = 0; i < 20; i++) {
 
                 let heart = document.createElement('span');
                 heart.innerHTML = "💗";
@@ -2085,7 +2093,7 @@
 
         balloonsContainers.forEach(container => {
 
-            for (let i = 0; i < 30; i++) {
+            for (let i = 0; i < 20; i++) {
 
                 let balloon = document.createElement('span');
                 balloon.innerHTML = "🎈";
@@ -2104,7 +2112,7 @@
 
         familysContainers.forEach(container => {
 
-            for (let i = 0; i < 30; i++) {
+            for (let i = 0; i < 20; i++) {
 
                 let family = document.createElement('span');
                 family.innerHTML = "💑";
