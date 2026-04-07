@@ -86,7 +86,8 @@
             transition: color 0.2s;
         }
 
-        .nav-links a:hover {
+        .nav-links a:hover,
+        .nav-links a.active {
             color: var(--teal);
         }
 
@@ -1815,192 +1816,26 @@
 
         <ul class="nav-links" id="navLinks">
             <li><a href="index.html">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="service.html">Maternity</a></li>
-            <li><a href="#newborn">Newborn</a></li>
-            <li><a href="#cakesmash">Cakesmash</a></li>
-            <li><a href="#family">Family Portraits</a></li>
-            <li><a href="#price">Pricing</a></li>
-            <li><a href="#blog">Blogs</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="maternity.html">Maternity</a></li>
+            <li><a href="new-born.html">Newborn</a></li>
+            <li><a href="cake-smash.html">Cakesmash</a></li>
+            <li><a href="family-portraits.html">Family Portraits</a></li>
+            <li><a href="portfolio.html" class="active">Gallery</a></li>
+            <li><a href="index.html#price">Pricing</a></li>
+            <li><a href="index.html#blog">Blogs</a></li>
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
     </nav>
 
-    <!-- SERVICE NAV TABS -->
-    <div class="service-nav" style="margin-top: 100px;">
-        <a href="#" class="active">✦ Your Photographer</a>
-        <a href="#">✦ The Process</a>
-        <a href="#">✦ The Gallery</a>
-        <a href="#">✦ Styling Guide</a>
-        <a href="#">✦ Pricing</a>
-        <a href="#">✦ Faq</a>
-    </div>
 
-    <!-- BREADCRUMB -->
-    <div class="breadcrumb">
-        <div class="breadcrumb-inner">
-            <a href="index.html">Home</a>
-            <span>›</span>
-            <span>Services</span>
-            <span>›</span>
-            <span style="color: var(--teal);">Maternity Photography</span>
-        </div>
-    </div>
-
-    <!-- PAGE HERO -->
-    <section style="padding-top: 0; padding-bottom: 80px;">
-        <div class="page-hero">
-            <!-- LEFT: TEXT -->
-            <div class="hero-left fade-up">
-                <!-- <span class="section-eyebrow">Toronto, Ontario</span> -->
-                <h1 class="page-title">Hey there, gorgeous <br>in <em>mamas-to-be!!</em></h1>
-                <p class="page-desc">
-                    The ideal time for a maternity session is 30–36 weeks, when your bump is beautifully rounded and
-                    comfortable. For expecting multiples or twins, we recommend 20–24 weeks for a safe and relaxed
-                    shoot.
-                </p>
-                <p class="page-desc">
-                    We curate locations that reflect your style like serene outdoor settings, studios, or the comfort of
-                    your own home. Every detail is thoughtfully considered to create a luxurious, effortless experience.
-                </p>
-                <div class="hero-stats">
-                    <div class="stat-item"><span class="stat-num">500+</span><span class="stat-label">Mamas
-                            Photographed</span></div>
-                    <div class="stat-item"><span class="stat-num">8+</span><span class="stat-label">Years
-                            Experience</span></div>
-                    <div class="stat-item"><span class="stat-num">30–36</span><span class="stat-label">Ideal
-                            Weeks</span></div>
-                </div>
-                <div class="hero-btns">
-                    <a href="#" class="btn-primary">
-                        Book Your Session
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M3 8h10M8 3l5 5-5 5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </a>
-                    <a href="#packages" class="btn-outline">View Packages</a>
-                </div>
-            </div>
-
-            <!-- RIGHT: COLLAGE -->
-            <div class="hero-collage fade-up">
-                <div>
-                    <img src="assets/maternity/sevice-maternity.png" alt="">
-                </div>
-                <div class="collage-badge">✦ Toronto Studio & Outdoor</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ABOUT / PHOTOGRAPHER -->
-    <section class="about-section">
-        <div class="about-inner">
-            <div class="about-image-stack fade-up">
-                <div class="stack-img1">
-                    <img src="assets/maternity/maternity1.webp" alt="Photography studio"
-                        onerror="this.parentElement.style.background='linear-gradient(135deg,#D4C5B8,#A89070)'" />
-                </div>
-                <div class="stack-img2">
-                    <img src="assets/family/family1.webp" alt="Maternity glow"
-                        onerror="this.parentElement.style.background='linear-gradient(135deg,#BDD0C8,#5A827C)'" />
-                </div>
-                <div class="about-pull">
-                    <span class="about-pull-num">500+</span>
-                    <span class="about-pull-text">Happy Families Served</span>
-                </div>
-            </div>
-            <div class="about-text fade-up">
-                <span class="section-eyebrow">Your Photographer</span>
-                <h2>Welcome to <em>Professional Maternity Photography</em> in Canada</h2>
-                <p>
-                    I am a professional and certified Maternity, Newborn, and Child Photographer who transitioned from a
-                    successful career as a Software Engineer to pursue the artistic path that has always inspired me.
-                </p>
-                <p>
-                    Certified under renowned and ace fashion photographer Karthik Srinivasan at KAPA and further trained
-                    by Amrita Samant (MommyShots by Amrita) a pioneer in the maternity and child photography industry.
-                </p>
-                <p>
-                    For me, photography is more than a profession, it is a deeply rooted passion that inspires me to
-                    create timeless, meaningful pictures for every family I work with.
-                </p>
-                <span class="about-signature">— With love, Bloom & Bare Photography</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- HOW IT WORKS TIMELINE -->
-    <section class="timeline-section">
-        <div class="timeline-header fade-up">
-            <span class="section-eyebrow" style="justify-content:center;">The Process</span>
-            <h2>How Your Session<br><em>Comes to Life</em></h2>
-        </div>
-        <div class="timeline-grid">
-            <!-- Step 1 LEFT -->
-            <div class="timeline-step-left fade-up">
-                <span class="step-num">01</span>
-                <h3 class="step-title">Inquiry & Consultation</h3>
-                <p class="step-desc">Reach out via email or the contact form. We'll schedule a relaxed phone or video
-                    call to discuss your vision, answer every question, and find your perfect date.</p>
-            </div>
-            <div class="timeline-center">
-                <div class="timeline-line"></div>
-                <div class="timeline-dot">01</div>
-                <div class="timeline-line"></div>
-            </div>
-            <div></div>
-
-            <!-- Step 2 RIGHT -->
-            <div></div>
-            <div class="timeline-center">
-                <div class="timeline-line"></div>
-                <div class="timeline-dot">02</div>
-                <div class="timeline-line"></div>
-            </div>
-            <div class="timeline-step-right fade-up">
-                <span class="step-num">02</span>
-                <h3 class="step-title">Styling & Planning</h3>
-                <p class="step-desc">I'll send you a full wardrobe styling guide, mood board, and location options. My
-                    client closet has gowns from size XS–XL — available at no extra cost.</p>
-            </div>
-
-            <!-- Step 3 LEFT -->
-            <div class="timeline-step-left fade-up">
-                <span class="step-num">03</span>
-                <h3 class="step-title">Your Session Day</h3>
-                <p class="step-desc">Arrive, relax, and let the magic happen. Sessions are unhurried — typically 1.5 to
-                    2 hours — with time for multiple looks, locations, and genuine emotion.</p>
-            </div>
-            <div class="timeline-center">
-                <div class="timeline-line"></div>
-                <div class="timeline-dot">03</div>
-                <div class="timeline-line"></div>
-            </div>
-            <div></div>
-
-            <!-- Step 4 RIGHT -->
-            <div></div>
-            <div class="timeline-center">
-                <div class="timeline-line"></div>
-                <div class="timeline-dot">04</div>
-                <div style="flex:1"></div>
-            </div>
-            <div class="timeline-step-right fade-up">
-                <span class="step-num">04</span>
-                <h3 class="step-title">Gallery Delivery</h3>
-                <p class="step-desc">Within 3–4 weeks, your private online gallery is delivered — filled with fully
-                    edited, high-resolution images ready to print, share, and treasure forever.</p>
-            </div>
-        </div>
-    </section>
 
     <!-- GALLERY -->
-    <section class="gallery-section" id="gallery">
+    <section class="gallery-section" id="gallery" style="margin-top: 70px;">
         <div class="gallery-header fade-up">
             <span class="section-eyebrow" style="justify-content:center;">The Gallery</span>
-            <h2>Maternity <em>Portfolio</em></h2>
-            <p class="gallery-sub">A glimpse into the radiant, intimate world of maternity photography — each image a
+            <h2>Our<em>Portfolio</em></h2>
+            <p class="gallery-sub">A glimpse into the radiant, intimate world of Ourphotography — each image a
                 testament to the beauty of becoming.</p>
         </div>
 
@@ -2062,266 +1897,173 @@
                 <div class="overlay"><span class="overlay-text">Tiny toes</span></div>
             </div>
 
+            <div class="masonry-item fade-up">
+                <img src="assets/maternity/maternity3.webp" alt="Newborn baby" style="height:290px;object-fit:cover;"
+                    onerror="this.style.height='290px'" />
+                <div class="overlay"><span class="overlay-text">First hello</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/newborn/newborn3.webp" alt="Maternity glow"
+                    style="height:390px;object-fit:cover;object-position:top;" onerror="this.style.height='390px'" />
+                <div class="overlay"><span class="overlay-text">Mama's warmth</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/cakesmash/cakesmash3.webp" alt="Happy child" style="height:310px;object-fit:cover;"
+                    onerror="this.style.height='310px'" />
+                <div class="overlay"><span class="overlay-text">Pure joy</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/family/family3.webp" alt="Family portrait" style="height:350px;object-fit:cover;"
+                    onerror="this.style.height='350px'" />
+                <div class="overlay"><span class="overlay-text">Together always</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/maternity/maternity1.webp" alt="Baby first birthday"
+                    style="height:270px;object-fit:cover;" onerror="this.style.height='270px'" />
+                <div class="overlay"><span class="overlay-text">One year old</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/newborn/newborn.webp" alt="Mother and newborn" style="height:400px;object-fit:cover;"
+                    onerror="this.style.height='400px'" />
+                <div class="overlay"><span class="overlay-text">Bloom & grow</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/cakesmash/cakesmash.webp" alt="Newborn sleeping" style="height:280px;object-fit:cover;"
+                    onerror="this.style.height='280px'" />
+                <div class="overlay"><span class="overlay-text">Sweet dreams</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/family/family.webp" alt="Family love" style="height:360px;object-fit:cover;"
+                    onerror="this.style.height='360px'" />
+                <div class="overlay"><span class="overlay-text">Family love</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/newborn/newborn2.webp" alt="Baby tiny feet" style="height:300px;object-fit:cover;"
+                    onerror="this.style.height='300px'" />
+                <div class="overlay"><span class="overlay-text">Tiny toes</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/maternity/maternity3.webp" alt="Newborn baby" style="height:290px;object-fit:cover;"
+                    onerror="this.style.height='290px'" />
+                <div class="overlay"><span class="overlay-text">First hello</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/newborn/newborn3.webp" alt="Maternity glow"
+                    style="height:390px;object-fit:cover;object-position:top;" onerror="this.style.height='390px'" />
+                <div class="overlay"><span class="overlay-text">Mama's warmth</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/cakesmash/cakesmash3.webp" alt="Happy child" style="height:310px;object-fit:cover;"
+                    onerror="this.style.height='310px'" />
+                <div class="overlay"><span class="overlay-text">Pure joy</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/family/family3.webp" alt="Family portrait" style="height:350px;object-fit:cover;"
+                    onerror="this.style.height='350px'" />
+                <div class="overlay"><span class="overlay-text">Together always</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/maternity/maternity1.webp" alt="Baby first birthday"
+                    style="height:270px;object-fit:cover;" onerror="this.style.height='270px'" />
+                <div class="overlay"><span class="overlay-text">One year old</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/newborn/newborn.webp" alt="Mother and newborn" style="height:400px;object-fit:cover;"
+                    onerror="this.style.height='400px'" />
+                <div class="overlay"><span class="overlay-text">Bloom & grow</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/cakesmash/cakesmash.webp" alt="Newborn sleeping" style="height:280px;object-fit:cover;"
+                    onerror="this.style.height='280px'" />
+                <div class="overlay"><span class="overlay-text">Sweet dreams</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/family/family.webp" alt="Family love" style="height:360px;object-fit:cover;"
+                    onerror="this.style.height='360px'" />
+                <div class="overlay"><span class="overlay-text">Family love</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/newborn/newborn2.webp" alt="Baby tiny feet" style="height:300px;object-fit:cover;"
+                    onerror="this.style.height='300px'" />
+                <div class="overlay"><span class="overlay-text">Tiny toes</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/maternity/maternity3.webp" alt="Newborn baby" style="height:290px;object-fit:cover;"
+                    onerror="this.style.height='290px'" />
+                <div class="overlay"><span class="overlay-text">First hello</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/newborn/newborn3.webp" alt="Maternity glow"
+                    style="height:390px;object-fit:cover;object-position:top;" onerror="this.style.height='390px'" />
+                <div class="overlay"><span class="overlay-text">Mama's warmth</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/cakesmash/cakesmash3.webp" alt="Happy child" style="height:310px;object-fit:cover;"
+                    onerror="this.style.height='310px'" />
+                <div class="overlay"><span class="overlay-text">Pure joy</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/family/family3.webp" alt="Family portrait" style="height:350px;object-fit:cover;"
+                    onerror="this.style.height='350px'" />
+                <div class="overlay"><span class="overlay-text">Together always</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/maternity/maternity1.webp" alt="Baby first birthday"
+                    style="height:270px;object-fit:cover;" onerror="this.style.height='270px'" />
+                <div class="overlay"><span class="overlay-text">One year old</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/newborn/newborn.webp" alt="Mother and newborn" style="height:400px;object-fit:cover;"
+                    onerror="this.style.height='400px'" />
+                <div class="overlay"><span class="overlay-text">Bloom & grow</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/cakesmash/cakesmash.webp" alt="Newborn sleeping" style="height:280px;object-fit:cover;"
+                    onerror="this.style.height='280px'" />
+                <div class="overlay"><span class="overlay-text">Sweet dreams</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/family/family.webp" alt="Family love" style="height:360px;object-fit:cover;"
+                    onerror="this.style.height='360px'" />
+                <div class="overlay"><span class="overlay-text">Family love</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/newborn/newborn2.webp" alt="Baby tiny feet" style="height:300px;object-fit:cover;"
+                    onerror="this.style.height='300px'" />
+                <div class="overlay"><span class="overlay-text">Tiny toes</span></div>
+            </div>
+
+
         </div>
+
     </section>
 
-    <!-- WHAT TO WEAR -->
-    <section class="wardrobe-section">
-        <div class="wardrobe-inner">
-            <div class="wardrobe-header fade-up">
-                <span class="section-eyebrow" style="justify-content:center;">Styling Guide</span>
-                <h2>What to Wear to Your<br><em>Maternity Session</em></h2>
-            </div>
-            <div class="wardrobe-grid">
-                <div class="wardrobe-card fade-up">
-                    <div class="wardrobe-card-img">
-                        <img src="assets/maternity/maternity3.webp" alt="Studio gowns"
-                            onerror="this.parentElement.style.background='linear-gradient(135deg,#D4C5B8,#A89070)'" />
-                    </div>
-                    <div class="wardrobe-card-body">
-                        <span class="wardrobe-tag">✦ Flowy & Romantic</span>
-                        <h3>Flowy Gowns</h3>
-                        <p>Flowing fabric flatters beautifully, emphasising the bump. Choose earthy tones, dusty rose,
-                            sage, or ivory. My client closet has 30+ gowns available free of charge.</p>
-                    </div>
-                </div>
-                <div class="wardrobe-card fade-up">
-                    <div class="wardrobe-card-img">
-                        <img src="assets/family/family1.webp" alt="Fitted style"
-                            onerror="this.parentElement.style.background='linear-gradient(135deg,#BDD0C8,#5A827C)'" />
-                    </div>
-                    <div class="wardrobe-card-body">
-                        <span class="wardrobe-tag">✦ Modern & Minimal</span>
-                        <h3>Form-Fitting Looks</h3>
-                        <p>A fitted bodysuit or wrap dress beautifully showcases the bump in its full glory. Neutral
-                            tones and soft textures photograph timlessly and age-proof in 20 years.</p>
-                    </div>
-                </div>
-                <div class="wardrobe-card fade-up">
-                    <div class="wardrobe-card-img">
-                        <img src="assets/cakesmash/cakesmash.webp" alt="Partner styling"
-                            onerror="this.parentElement.style.background='linear-gradient(135deg,#D9CFC8,#9A8880)'" />
-                    </div>
-                    <div class="wardrobe-card-body">
-                        <span class="wardrobe-tag">✦ Partner & Family</span>
-                        <h3>Coordinating Outfits</h3>
-                        <p>Partners and siblings look best in complementary (not matching) tones. Avoid logos and busy
-                            prints. Think: linen, neutrals, soft denim, and classic white shirts.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="wardrobe-tips fade-up">
-                <div class="tip-card">
-                    <div class="tip-icon">🎨</div>
-                    <div class="tip-content">
-                        <h4>Colour Palette</h4>
-                        <p>Earthy tones, blush, sage, ivory, and warm whites photograph beautifully. Avoid neon or very
-                            dark colours which can cast colour on skin.</p>
-                    </div>
-                </div>
-                <div class="tip-card">
-                    <div class="tip-icon">💅</div>
-                    <div class="tip-content">
-                        <h4>Hair & Makeup</h4>
-                        <p>Professional hair & makeup is recommended. I can connect you with trusted artists. Fresh
-                            blowout or loose waves work beautifully for a timeless look.</p>
-                    </div>
-                </div>
-                <div class="tip-card">
-                    <div class="tip-icon">👗</div>
-                    <div class="tip-content">
-                        <h4>Client Closet Access</h4>
-                        <p>I maintain a curated closet of 30+ gowns, wraps, and accessories in sizes XS–2XL — all
-                            included in your session at no extra charge.</p>
-                    </div>
-                </div>
-                <div class="tip-card">
-                    <div class="tip-icon">📅</div>
-                    <div class="tip-content">
-                        <h4>Timing Is Everything</h4>
-                        <p>Book between 28–36 weeks for the most beautiful bump. Too early and the bump is small; too
-                            late and comfort decreases. 32 weeks is the sweet spot.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PACKAGES -->
-    <section class="packages-section" id="packages">
-        <div class="packages-header fade-up">
-            <span class="section-eyebrow" style="justify-content:center;">Investment</span>
-            <h2>Maternity Session<br><em>Packages</em></h2>
-        </div>
-        <div class="packages-grid">
-            <!-- Essential -->
-            <div class="package-card fade-up">
-                <div class="package-card-inner">
-                    <span class="pkg-badge">✦ Essential</span>
-                    <h3 class="pkg-name">The Bloom Session</h3>
-                    <div class="pkg-price"><sup>$</sup>450</div>
-                    <div class="pkg-divider"></div>
-                    <ul class="pkg-features">
-                        <li>1.5 hour studio session</li>
-                        <li>1 location / backdrop</li>
-                        <li>15 fully edited images</li>
-                        <li>Private online gallery</li>
-                        <li>Wardrobe styling guide</li>
-                        <li>Client closet access</li>
-                    </ul>
-                    <a href="#" class="pkg-btn">Enquire Now</a>
-                </div>
-            </div>
-            <!-- Signature — FEATURED -->
-            <div class="package-card featured fade-up">
-                <div class="pkg-popular">Most Popular</div>
-                <div class="package-card-inner">
-                    <span class="pkg-badge">✦ Signature</span>
-                    <h3 class="pkg-name">The Bare Session</h3>
-                    <div class="pkg-price"><sup>$</sup>750</div>
-                    <div class="pkg-divider"></div>
-                    <ul class="pkg-features">
-                        <li>2 hour studio + outdoor session</li>
-                        <li>3 looks / locations</li>
-                        <li>30 fully edited images</li>
-                        <li>Private online gallery</li>
-                        <li>Full wardrobe consultation</li>
-                        <li>Client closet access</li>
-                        <li>Partner & sibling portraits</li>
-                        <li>1 large fine-art print included</li>
-                    </ul>
-                    <a href="#" class="pkg-btn">Book This Session</a>
-                </div>
-            </div>
-            <!-- Luxe -->
-            <div class="package-card fade-up">
-                <div class="package-card-inner">
-                    <span class="pkg-badge">✦ Luxe</span>
-                    <h3 class="pkg-name">The Heirloom Session</h3>
-                    <div class="pkg-price"><sup>$</sup>1,200</div>
-                    <div class="pkg-divider"></div>
-                    <ul class="pkg-features">
-                        <li>3 hour full luxury session</li>
-                        <li>Unlimited looks & locations</li>
-                        <li>All edited images (50+)</li>
-                        <li>Private online gallery</li>
-                        <li>Professional styling service</li>
-                        <li>Client closet + personal shopper</li>
-                        <li>Hair & makeup coordination</li>
-                        <li>Premium album + wall art package</li>
-                        <li>Newborn session priority booking</li>
-                    </ul>
-                    <a href="#" class="pkg-btn">Enquire Now</a>
-                </div>
-            </div>
-        </div>
-        <div style=" max-width: 1100px; margin: 30px auto;">
-            <p style=" font-size:0.82rem; color:var(--text-light);"> <span style="color: red;">*</span>It is prohibited
-                to
-                use your cell phone camera or any other camera during the photo session.
-            </p>
-            <p style="  font-size:0.82rem; color:var(--text-light);"><span style="color: red;">*</span> It is client’s
-                responsibility to download, store and protect photographs from loosing after 14 days from the
-                date they have been sent to the client. After 14 days I don’t grantee availability of your pictures.
-                Additional fee of $30 applied for re-sending the pictures in case if I still have them.</p>
-            <p style="  font-size:0.82rem; color:var(--text-light);"><span style="color: red;">*</span> By using my
-                services, you agree to these terms.</p>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq-section">
-        <div class="faq-inner">
-            <div class="faq-header fade-up">
-                <span class="section-eyebrow" style="justify-content:center;">Questions</span>
-                <h2>Frequently Asked<br><em>Questions</em></h2>
-            </div>
-
-            <div class="faq-item" onclick="toggleFaq(this)">
-                <div class="faq-q">
-                    <span>When is the best time to book my maternity session?</span>
-                    <div class="faq-icon"><svg viewBox="0 0 14 14" fill="none">
-                            <path d="M7 1v12M1 7h12" stroke="#3A3530" stroke-width="1.5" stroke-linecap="round" />
-                        </svg></div>
-                </div>
-                <div class="faq-a">
-                    <p>I recommend booking between 28–36 weeks of pregnancy, with 32 weeks being the sweet spot. This
-                        ensures your bump is beautifully prominent while you're still comfortable and glowing. Please
-                        book early — maternity dates fill up quickly, especially in spring and autumn.</p>
-                </div>
-            </div>
-
-            <div class="faq-item" onclick="toggleFaq(this)">
-                <div class="faq-q">
-                    <span>Where is your studio located?</span>
-                    <div class="faq-icon"><svg viewBox="0 0 14 14" fill="none">
-                            <path d="M7 1v12M1 7h12" stroke="#3A3530" stroke-width="1.5" stroke-linecap="round" />
-                        </svg></div>
-                </div>
-                <div class="faq-a">
-                    <p>My warm, light-filled studio is located in Toronto, Ontario. I also travel to outdoor locations
-                        across the GTA — including ravines, gardens, and lakefronts — at no additional charge within
-                        25km of the studio. Exact studio address is shared upon booking.</p>
-                </div>
-            </div>
-
-            <div class="faq-item" onclick="toggleFaq(this)">
-                <div class="faq-q">
-                    <span>Can my partner and/or children join the session?</span>
-                    <div class="faq-icon"><svg viewBox="0 0 14 14" fill="none">
-                            <path d="M7 1v12M1 7h12" stroke="#3A3530" stroke-width="1.5" stroke-linecap="round" />
-                        </svg></div>
-                </div>
-                <div class="faq-a">
-                    <p>Absolutely — and I encourage it! Partner and sibling portraits are included in all Bare and
-                        Heirloom packages. For the Bloom package, family portraits can be added for a small supplement.
-                        Children under 3 tend to do best for the first 20–30 minutes, so we start with family shots.</p>
-                </div>
-            </div>
-
-            <div class="faq-item" onclick="toggleFaq(this)">
-                <div class="faq-q">
-                    <span>How long until I receive my gallery?</span>
-                    <div class="faq-icon"><svg viewBox="0 0 14 14" fill="none">
-                            <path d="M7 1v12M1 7h12" stroke="#3A3530" stroke-width="1.5" stroke-linecap="round" />
-                        </svg></div>
-                </div>
-                <div class="faq-a">
-                    <p>Your private online gallery is delivered within 3–4 weeks of your session. Rush delivery (within
-                        1 week) is available for an additional fee — useful if you're close to your due date. You'll
-                        receive a sneak peek on social media within 48 hours of your session.</p>
-                </div>
-            </div>
-
-            <div class="faq-item" onclick="toggleFaq(this)">
-                <div class="faq-q">
-                    <span>What if I go into labour before my session date?</span>
-                    <div class="faq-icon"><svg viewBox="0 0 14 14" fill="none">
-                            <path d="M7 1v12M1 7h12" stroke="#3A3530" stroke-width="1.5" stroke-linecap="round" />
-                        </svg></div>
-                </div>
-                <div class="faq-a">
-                    <p>Life happens! If baby arrives before your maternity session, we can easily convert your booking
-                        into a newborn session instead — at no penalty. I always hold space for flexibility because I
-                        understand that pregnancy is beautifully unpredictable.</p>
-                </div>
-            </div>
-
-            <div class="faq-item" onclick="toggleFaq(this)">
-                <div class="faq-q">
-                    <span>Do you offer payment plans?</span>
-                    <div class="faq-icon"><svg viewBox="0 0 14 14" fill="none">
-                            <path d="M7 1v12M1 7h12" stroke="#3A3530" stroke-width="1.5" stroke-linecap="round" />
-                        </svg></div>
-                </div>
-                <div class="faq-a">
-                    <p>Yes — I offer interest-free payment plans for all packages. A 30% deposit secures your date, with
-                        the remainder due on or before your session day. I want this experience to be accessible without
-                        financial stress. Please ask during your consultation.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- TESTIMONIALS -->
     <section class="testimonials-section">
@@ -2341,8 +2083,8 @@
                     <div class="author-avatar"><img
                             src="https://images.pexels.com/photos/3996302/pexels-photo-3996302.jpeg?auto=compress&cs=tinysrgb&w=100"
                             alt="Sarah" onerror="this.parentElement.style.background='var(--beige-dark)'" /></div>
-                    <div class="author-info"><span class="author-name">Sarah M.</span><span
-                            class="author-meta">Maternity Client · Toronto, 2024</span></div>
+                    <div class="author-info"><span class="author-name">Sarah M.</span><span class="author-meta">New Born
+                            Client · Toronto, 2024</span></div>
                 </div>
             </div>
             <div class="testimonial-card fade-up">
@@ -2356,8 +2098,8 @@
                     <div class="author-avatar"><img
                             src="https://images.pexels.com/photos/1648387/pexels-photo-1648387.jpeg?auto=compress&cs=tinysrgb&w=100"
                             alt="Amara" onerror="this.parentElement.style.background='var(--beige-dark)'" /></div>
-                    <div class="author-info"><span class="author-name">Amara K.</span><span
-                            class="author-meta">Maternity Client · Mississauga, 2024</span></div>
+                    <div class="author-info"><span class="author-name">Amara K.</span><span class="author-meta">New Born
+                            Client · Mississauga, 2024</span></div>
                 </div>
             </div>
             <div class="testimonial-card fade-up">
@@ -2388,7 +2130,7 @@
         <div class="cta-inner">
             <p class="cta-eyebrow">Begin Your Story</p>
             <h2 class="cta-title">Let's capture your<br><em>beautiful journey</em></h2>
-            <p class="cta-sub">Maternity dates fill quickly — especially spring and autumn. Reach out today and let's
+            <p class="cta-sub">New Born dates fill quickly — especially spring and autumn. Reach out today and let's
                 create something extraordinary together.</p>
             <a href="#" class="btn-white">
                 Book Your Session
@@ -2405,7 +2147,7 @@
         <div class="footer-grid">
             <div class="footer-brand">
                 <span class="brand-name">Bloom & Bare Photography</span>
-                <p>Specialising in maternity, newborn, and family photography across Toronto and the Greater Toronto
+                <p>Specialising in New Born, newborn, and family photography across Toronto and the Greater Toronto
                     Area. Every session is crafted with care, creativity, and heart.</p>
                 <div class="contact-info">
                     <div class="contact-item">
@@ -2520,6 +2262,7 @@
 
         menuToggle.addEventListener("click", () => {
             navLinks.classList.toggle("active");
+            menuToggle.textContent = navLinks.classList.contains("active") ? "✕" : "☰";
         });
     </script>
 </body>

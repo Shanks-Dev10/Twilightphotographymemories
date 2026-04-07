@@ -86,7 +86,8 @@
             transition: color 0.2s;
         }
 
-        .nav-links a:hover {
+        .nav-links a:hover,
+        .nav-links a.active {
             color: var(--teal);
         }
 
@@ -1353,15 +1354,16 @@
             ☰
         </div>
 
-        <ul class="nav-links" id="navLinks">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="service.html">Maternity</a></li>
-            <li><a href="#newborn">Newborn</a></li>
-            <li><a href="#cakesmash">Cakesmash</a></li>
-            <li><a href="#family">Family Portraits</a></li>
-            <li><a href="#price">Pricing</a></li>
-            <li><a href="#blog">Blogs</a></li>
+         <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html" >About</a></li>
+            <li><a href="maternity.html">Maternity</a></li>
+            <li><a href="new-born.html">Newborn</a></li>
+            <li><a href="cake-smash.html">Cakesmash</a></li>
+            <li><a href="family-portraits.html">Family Portraits</a></li>
+            <li><a href="portfolio.html">Gallery</a></li>
+            <li><a href="index.html#price">Pricing</a></li>
+            <li><a href="index.html#blog">Blogs</a></li>
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
     </nav>
@@ -1373,25 +1375,25 @@
             <!-- Auto-play slider with real images -->
             <div class="slider-wrap">
 
-                <a href="service.html" class="slide active">
+                <a href="maternity.html" class="slide active">
                     <img src="assets/maternity/maternity.webp" alt="Maternity portrait" loading="eager"
                         onerror="this.parentElement.style.background='linear-gradient(135deg,#D4C5B8,#A89070)'" />
                     <div class="slide-overlay"><span class="slide-label">Maternity Portraits</span></div>
                 </a>
 
-                <a href="service.html" class="slide">
+                <a href="maternity.html" class="slide">
                     <img src="assets/newborn/newborn.webp" alt="Newborn baby" loading="lazy"
                         onerror="this.parentElement.style.background='linear-gradient(135deg,#BDD0C8,#5A827C)'" />
                     <div class="slide-overlay"><span class="slide-label">Newborn Sessions</span></div>
                 </a>
 
-                <a href="service.html" class="slide">
+                <a href="maternity.html" class="slide">
                     <img src="assets/cakesmash/cakesmash.webp" alt="cake smash" loading="lazy"
                         onerror="this.parentElement.style.background='linear-gradient(135deg,#D9CFC8,#9A8880)'" />
                     <div class="slide-overlay"><span class="slide-label">Cake Smash</span></div>
                 </a>
 
-                <a href="service.html" class="slide">
+                <a href="maternity.html" class="slide">
                     <img src="assets/family/family.webp" alt="cake smash" loading="lazy"
                         onerror="this.parentElement.style.background='linear-gradient(135deg,#D9CFC8,#9A8890)'" />
                     <div class="slide-overlay"><span class="slide-label">Family Potraits</span></div>
@@ -1452,12 +1454,12 @@
             <div class="service-row fade-up" style="overflow: hidden;" id="maternity">
                 <div class="image-group">
 
-                    <a href="service.html" class="service-image" style="height: 300px;">
+                    <a href="maternity.html" class="service-image" style="height: 300px;">
                         <img src="assets/maternity/maternity1.webp" alt="maternity">
                         <div class="service-img-overlay"></div>
                     </a>
 
-                    <a href="service.html" class="service-image">
+                    <a href="maternity.html" class="service-image">
                         <img src="assets/maternity/maternity2.webp" alt="maternity">
                         <div class="service-img-overlay"></div>
                         <span class="service-badge">✦ Maternity</span>
@@ -1492,12 +1494,12 @@
             <div class="service-row reverse fade-up" style="overflow: hidden;" id="newborn">
                 <div class="image-group">
 
-                    <a href="service.html" class="service-image" style="height: 300px;">
+                    <a href="maternity.html" class="service-image" style="height: 300px;">
                         <img src="assets/newborn/newborn1.webp" alt="newborn">
                         <div class="service-img-overlay"></div>
                     </a>
 
-                    <a href="service.html"  class="service-image">
+                    <a href="maternity.html"  class="service-image">
                         <img src="assets/newborn/newborn2.webp" alt="newborn">
                         <div class="service-img-overlay"></div>
                         <span class="service-badge">✦ New Born</span>
@@ -1531,12 +1533,12 @@
             <div class="service-row fade-up" style="overflow: hidden;" id="cake">
                 <div class="image-group">
 
-                    <a href="service.html" class="service-image" style="height: 300px;">
+                    <a href="maternity.html" class="service-image" style="height: 300px;">
                         <img src="assets/cakesmash/cakesmash2.webp" alt="cakesmash">
                         <div class="service-img-overlay"></div>
                     </a>
 
-                    <a href="service.html" class="service-image">
+                    <a href="maternity.html" class="service-image">
                         <img src="assets/cakesmash/cakesmash3.webp" alt="cakesmash">
                         <div class="service-img-overlay"></div>
                         <span class="service-badge">✦ Cake Smash</span>
@@ -1570,12 +1572,12 @@
             <div class="service-row reverse fade-up" id="family">
                 <div class="image-group">
 
-                    <a href="service.html" class="service-image" style="height: 300px;">
+                    <a href="maternity.html" class="service-image" style="height: 300px;">
                         <img src="assets/family/family3.webp" alt="family">
                         <div class="service-img-overlay"></div>
                     </a>
 
-                    <a href="service.html" class="service-image">
+                    <a href="maternity.html" class="service-image">
                         <img src="assets/family/family2.webp" alt="family">
                         <div class="service-img-overlay"></div>
                         <span class="service-badge">✦ Family</span>
@@ -2202,6 +2204,7 @@
 
         menuToggle.addEventListener("click", () => {
             navLinks.classList.toggle("active");
+            menuToggle.textContent = navLinks.classList.contains("active") ? "✕" : "☰";
         });
 
 

@@ -1,0 +1,2530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maternity Photography Toronto | Bloom & Bare</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+    <style>
+        :root {
+            --beige: #F5EFEA;
+            --beige-dark: #EDE4DC;
+            --teal: #2F6F73;
+            --teal-light: #3D8C91;
+            --white: #FFFFFF;
+            --text: #3A3530;
+            --text-light: #7A6F68;
+            --serif: 'Cormorant Garamond', Georgia, serif;
+            --sans: 'Jost', sans-serif;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--sans);
+            background: var(--beige);
+            color: var(--text);
+            overflow-x: hidden;
+            font-weight: 300;
+        }
+
+        /* NAV */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 60px;
+            background: rgba(245, 239, 234, 0.94);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(47, 111, 115, 0.1);
+        }
+
+        .nav-logo {
+            font-family: var(--serif);
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: var(--teal);
+            text-decoration: none;
+        }
+
+        .nav-logo span {
+            font-style: italic;
+            font-weight: 300;
+            color: var(--text-light);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 36px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.78rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--teal);
+        }
+
+        .nav-cta {
+            background: var(--teal);
+            color: #fff;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-size: 0.78rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .nav-cta:hover {
+            background: var(--teal-light);
+            transform: translateY(-1px);
+        }
+
+        /* BREADCRUMB */
+        .breadcrumb {
+            padding: 110px 60px 0;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .breadcrumb-inner {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.72rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text-light);
+        }
+
+        .breadcrumb-inner a {
+            color: var(--teal);
+            text-decoration: none;
+        }
+
+        .breadcrumb-inner span {
+            color: var(--text-light);
+        }
+
+        /* PAGE HERO */
+        .page-hero {
+            padding: 40px 60px 80px;
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .hero-left {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .section-eyebrow {
+            font-size: 0.72rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--teal);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-eyebrow::before {
+            content: '';
+            width: 28px;
+            height: 1px;
+            background: var(--teal);
+        }
+
+        .page-title {
+            font-family: var(--serif);
+            font-size: clamp(2.4rem, 4vw, 3.6rem);
+            font-weight: 400;
+            line-height: 1.18;
+        }
+
+        .page-title em {
+            font-style: italic;
+            color: var(--teal);
+        }
+
+        .page-desc {
+            font-size: 0.94rem;
+            line-height: 1.9;
+            color: var(--text-light);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 32px;
+            padding: 28px 0;
+            border-top: 1px solid var(--beige-dark);
+            border-bottom: 1px solid var(--beige-dark);
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .stat-num {
+            font-family: var(--serif);
+            font-size: 2rem;
+            color: var(--teal);
+            font-weight: 400;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.7rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text-light);
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 30px;
+            background: var(--teal);
+            color: #fff;
+            border-radius: 50px;
+            font-size: 0.78rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s;
+            width: fit-content;
+            font-weight: 400;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background: var(--teal-light);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(47, 111, 115, 0.3);
+        }
+
+        .btn-primary svg {
+            transition: transform 0.3s;
+        }
+
+        .btn-primary:hover svg {
+            transform: translateX(4px);
+        }
+
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 30px;
+            background: transparent;
+            color: var(--teal);
+            border: 1px solid var(--teal);
+            border-radius: 50px;
+            font-size: 0.78rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s;
+            width: fit-content;
+            font-weight: 400;
+            cursor: pointer;
+        }
+
+        .btn-outline:hover {
+            background: var(--teal);
+            color: #fff;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        /* HERO IMAGE COLLAGE */
+        .hero-collage {
+            position: relative;
+            height: 580px;
+        }
+
+        .collage-main {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 68%;
+            height: 100%;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 30px 70px rgba(47, 111, 115, 0.16);
+        }
+
+        .collage-main img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .collage-accent {
+            position: absolute;
+            right: 0;
+            top: 10%;
+            width: 38%;
+            height: 46%;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+            border: 4px solid var(--white);
+        }
+
+        .collage-accent img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .collage-accent2 {
+            position: absolute;
+            right: 4%;
+            bottom: 0;
+            width: 32%;
+            height: 38%;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+            border: 4px solid var(--white);
+        }
+
+        .collage-accent2 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .collage-badge {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            padding: 10px 20px;
+            font-size: 0.72rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--teal);
+            font-weight: 500;
+            z-index: 5;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            white-space: nowrap;
+        }
+
+        /* ABOUT SECTION */
+        .about-section {
+            background: var(--white);
+            padding: 100px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--teal), transparent);
+        }
+
+        .about-inner {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-image-stack {
+            position: relative;
+            height: 520px;
+        }
+
+        .stack-img1 {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 72%;
+            height: 80%;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 25px 60px rgba(47, 111, 115, 0.14);
+        }
+
+        .stack-img1 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .stack-img2 {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 52%;
+            height: 55%;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            border: 5px solid var(--white);
+        }
+
+        .stack-img2 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .about-pull {
+            position: absolute;
+            top: 40%;
+            right: 0;
+            transform: translateY(-50%);
+            background: var(--teal);
+            color: #fff;
+            border-radius: 16px;
+            padding: 20px 24px;
+            max-width: 180px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .about-pull-num {
+            font-family: var(--serif);
+            font-size: 2.4rem;
+            font-weight: 300;
+            display: block;
+        }
+
+        .about-pull-text {
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            opacity: 0.85;
+            margin-top: 4px;
+        }
+
+        .about-text {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+        }
+
+        .about-text h2 {
+            font-family: var(--serif);
+            font-size: clamp(1.8rem, 2.8vw, 2.6rem);
+            font-weight: 400;
+            line-height: 1.28;
+        }
+
+        .about-text h2 em {
+            font-style: italic;
+            color: var(--teal);
+        }
+
+        .about-text p {
+            font-size: 0.92rem;
+            line-height: 1.9;
+            color: var(--text-light);
+        }
+
+        .about-signature {
+            font-family: var(--serif);
+            font-size: 1.6rem;
+            font-style: italic;
+            color: var(--teal);
+            font-weight: 300;
+            padding-top: 8px;
+        }
+
+        /* TIMELINE — HOW IT WORKS */
+        .timeline-section {
+            padding: 100px 60px;
+            background: var(--beige);
+        }
+
+        .timeline-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 70px;
+        }
+
+        .timeline-header h2 {
+            font-family: var(--serif);
+            font-size: clamp(2rem, 3vw, 2.8rem);
+            font-weight: 400;
+            line-height: 1.25;
+            margin-top: 12px;
+        }
+
+        .timeline-header h2 em {
+            font-style: italic;
+            color: var(--teal);
+        }
+
+        .timeline-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 60px 1fr;
+            gap: 0 0;
+        }
+
+        .timeline-step-left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            text-align: right;
+            padding: 0 40px 60px 0;
+        }
+
+        .timeline-step-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            padding: 0 0 60px 40px;
+        }
+
+        .timeline-center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .timeline-line {
+            flex: 1;
+            width: 1px;
+            background: linear-gradient(to bottom, var(--teal), transparent);
+        }
+
+        .timeline-dot {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--teal);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--serif);
+            font-size: 1.1rem;
+            font-weight: 500;
+            flex-shrink: 0;
+            box-shadow: 0 8px 24px rgba(47, 111, 115, 0.3);
+        }
+
+        .step-num {
+            font-family: var(--serif);
+            font-size: 3rem;
+            color: rgba(47, 111, 115, 0.12);
+            line-height: 1;
+            font-weight: 600;
+        }
+
+        .step-title {
+            font-family: var(--serif);
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--text);
+            margin: 6px 0 8px;
+        }
+
+        .step-desc {
+            font-size: 0.85rem;
+            line-height: 1.8;
+            color: var(--text-light);
+            max-width: 280px;
+        }
+
+        /* GALLERY GRID */
+        .gallery-section {
+            padding: 100px 60px;
+            background: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--teal), transparent);
+        }
+
+        .gallery-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 50px;
+        }
+
+        .gallery-header h2 {
+            font-family: var(--serif);
+            font-size: clamp(2rem, 3vw, 2.8rem);
+            font-weight: 400;
+            line-height: 1.25;
+            margin-top: 12px;
+        }
+
+        .gallery-header h2 em {
+            font-style: italic;
+            color: var(--teal);
+        }
+
+        .gallery-sub {
+            margin-top: 14px;
+            font-size: 0.9rem;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+
+        /* Masonry */
+        .masonry {
+            columns: 3;
+            column-gap: 16px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 16px;
+            border-radius: 18px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            background: var(--beige-dark);
+        }
+
+        .masonry-item img {
+            width: 100%;
+            display: block;
+            transition: transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .masonry-item:hover img {
+            transform: scale(1.06);
+        }
+
+        .masonry-item .overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(47, 111, 115, 0.62) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.4s;
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+        }
+
+        .masonry-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay-text {
+            font-family: var(--serif);
+            color: #fff;
+            font-size: 1.1rem;
+            font-style: italic;
+            font-weight: 300;
+            transform: translateY(8px);
+            transition: transform 0.4s;
+        }
+
+        .masonry-item:hover .overlay-text {
+            transform: translateY(0);
+        }
+
+        /* WARDROBE / WHAT TO WEAR */
+        .wardrobe-section {
+            padding: 100px 60px;
+            background: var(--beige);
+        }
+
+        .wardrobe-inner {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .wardrobe-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 60px;
+        }
+
+        .wardrobe-header h2 {
+            font-family: var(--serif);
+            font-size: clamp(2rem, 3vw, 2.8rem);
+            font-weight: 400;
+            line-height: 1.25;
+            margin-top: 12px;
+        }
+
+        .wardrobe-header h2 em {
+            font-style: italic;
+            color: var(--teal);
+        }
+
+        .wardrobe-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .wardrobe-card {
+            background: var(--white);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .wardrobe-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(47, 111, 115, 0.12);
+        }
+
+        .wardrobe-card-img {
+            height: 260px;
+            overflow: hidden;
+            background: var(--beige-dark);
+        }
+
+        .wardrobe-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        .wardrobe-card:hover .wardrobe-card-img img {
+            transform: scale(1.05);
+        }
+
+        .wardrobe-card-body {
+            padding: 24px 28px;
+        }
+
+        .wardrobe-tag {
+            font-size: 0.68rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--teal);
+            font-weight: 500;
+        }
+
+        .wardrobe-card-body h3 {
+            font-family: var(--serif);
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin: 8px 0 10px;
+            color: var(--text);
+        }
+
+        .wardrobe-card-body p {
+            font-size: 0.83rem;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+
+        .wardrobe-tips {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 40px;
+        }
+
+        .tip-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 22px 26px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .tip-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+
+        .tip-content h4 {
+            font-family: var(--serif);
+            font-size: 1.05rem;
+            font-weight: 500;
+            margin-bottom: 6px;
+            color: var(--text);
+        }
+
+        .tip-content p {
+            font-size: 0.82rem;
+            line-height: 1.75;
+            color: var(--text-light);
+        }
+
+        /* PACKAGES */
+        .packages-section {
+            padding: 100px 60px;
+            background: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .packages-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--teal), transparent);
+        }
+
+        .packages-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 60px;
+        }
+
+        .packages-header h2 {
+            font-family: var(--serif);
+            font-size: clamp(2rem, 3vw, 2.8rem);
+            font-weight: 400;
+            line-height: 1.25;
+            margin-top: 12px;
+        }
+
+        .packages-header h2 em {
+            font-style: italic;
+            color: var(--teal);
+        }
+
+        .packages-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .package-card {
+            border-radius: 28px;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .package-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 70px rgba(47, 111, 115, 0.18);
+        }
+
+        .package-card.featured {
+            border: 2px solid var(--teal);
+        }
+
+        .package-card-inner {
+            background: var(--beige);
+            padding: 40px 32px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .package-card.featured .package-card-inner {
+            background: var(--teal);
+            color: #fff;
+        }
+
+        .pkg-badge {
+            font-size: 0.68rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--teal);
+            font-weight: 500;
+        }
+
+        .package-card.featured .pkg-badge {
+            color: rgba(255, 255, 255, 0.65);
+        }
+
+        .pkg-name {
+            font-family: var(--serif);
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: var(--text);
+            line-height: 1.2;
+        }
+
+        .package-card.featured .pkg-name {
+            color: #fff;
+        }
+
+        .pkg-price {
+            font-family: var(--serif);
+            font-size: 2.8rem;
+            font-weight: 300;
+            color: var(--teal);
+            line-height: 1;
+        }
+
+        .pkg-price sup {
+            font-size: 1.2rem;
+            vertical-align: super;
+        }
+
+        .package-card.featured .pkg-price {
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .pkg-divider {
+            height: 1px;
+            background: rgba(47, 111, 115, 0.15);
+        }
+
+        .package-card.featured .pkg-divider {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .pkg-features {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex: 1;
+        }
+
+        .pkg-features li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.84rem;
+            color: var(--text-light);
+        }
+
+        .package-card.featured .pkg-features li {
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .pkg-features li::before {
+            content: '';
+            width: 16px;
+            height: 1px;
+            background: var(--teal);
+            flex-shrink: 0;
+        }
+
+        .package-card.featured .pkg-features li::before {
+            background: rgba(255, 255, 255, 0.6);
+        }
+
+        .pkg-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 13px 28px;
+            border-radius: 50px;
+            font-size: 0.78rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: 400;
+            cursor: pointer;
+            border: none;
+            background: var(--teal);
+            color: #fff;
+        }
+
+        .package-card.featured .pkg-btn {
+            background: #fff;
+            color: var(--teal);
+        }
+
+        .pkg-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(47, 111, 115, 0.3);
+        }
+
+        .pkg-popular {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(8px);
+            border-radius: 50px;
+            padding: 4px 14px;
+            font-size: 0.68rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        /* FAQ */
+        .faq-section {
+            padding: 100px 60px;
+            background: var(--beige);
+        }
+
+        .faq-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .faq-header h2 {
+            font-family: var(--serif);
+            font-size: clamp(2rem, 3vw, 2.8rem);
+            font-weight: 400;
+            line-height: 1.25;
+            margin-top: 12px;
+        }
+
+        .faq-header h2 em {
+            font-style: italic;
+            color: var(--teal);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(47, 111, 115, 0.15);
+            padding: 24px 0;
+            cursor: pointer;
+        }
+
+        .faq-item:first-of-type {
+            border-top: 1px solid rgba(47, 111, 115, 0.15);
+        }
+
+        .faq-q {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .faq-q span {
+            font-family: var(--serif);
+            font-size: 1.15rem;
+            font-weight: 400;
+            color: var(--text);
+            line-height: 1.4;
+        }
+
+        .faq-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--beige-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .faq-item.open .faq-icon {
+            background: var(--teal);
+            transform: rotate(45deg);
+        }
+
+        .faq-icon svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .faq-item.open .faq-icon svg path {
+            stroke: #fff;
+        }
+
+        .faq-a {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s;
+        }
+
+        .faq-item.open .faq-a {
+            max-height: 300px;
+            padding-top: 14px;
+        }
+
+        .faq-a p {
+            font-size: 0.9rem;
+            line-height: 1.85;
+            color: var(--text-light);
+        }
+
+        /* TESTIMONIALS */
+        .testimonials-section {
+            padding: 100px 60px;
+            background: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonials-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--teal), transparent);
+        }
+
+        .testimonials-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 60px;
+        }
+
+        .testimonials-header h2 {
+            font-family: var(--serif);
+            font-size: clamp(2rem, 3vw, 2.8rem);
+            font-weight: 400;
+            line-height: 1.25;
+            margin-top: 12px;
+        }
+
+        .testimonials-header h2 em {
+            font-style: italic;
+            color: var(--teal);
+        }
+
+        .testimonials-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .testimonial-card {
+            background: var(--beige);
+            border-radius: 24px;
+            padding: 36px 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(47, 111, 115, 0.1);
+        }
+
+        .testimonial-stars {
+            display: flex;
+            gap: 4px;
+        }
+
+        .star {
+            color: var(--teal);
+            font-size: 0.9rem;
+        }
+
+        .testimonial-text {
+            font-family: var(--serif);
+            font-size: 1.1rem;
+            font-style: italic;
+            font-weight: 300;
+            line-height: 1.65;
+            color: var(--text);
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding-top: 14px;
+            border-top: 1px solid rgba(47, 111, 115, 0.12);
+        }
+
+        .author-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--beige-dark);
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .author-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .author-name {
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: var(--text);
+        }
+
+        .author-meta {
+            font-size: 0.72rem;
+            color: var(--text-light);
+            letter-spacing: 0.06em;
+        }
+
+        /* CTA */
+        .cta-section {
+            padding: 30px 60px;
+            background: linear-gradient(135deg, #1E3E40 0%, #2F6F73 40%, #3D8C91 100%);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .cta-bg-img {
+            position: absolute;
+            inset: 0;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            opacity: 0.12;
+            mix-blend-mode: luminosity;
+        }
+
+        .cta-blob {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.04);
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .cta-blob-1 {
+            width: 400px;
+            height: 400px;
+            top: -100px;
+            left: -100px;
+        }
+
+        .cta-blob-2 {
+            width: 300px;
+            height: 300px;
+            bottom: -80px;
+            right: -80px;
+            animation-delay: 3s;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) scale(1)
+            }
+
+            50% {
+                transform: translateY(-20px) scale(1.05)
+            }
+        }
+
+        .cta-inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-eyebrow {
+            font-size: 0.72rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 20px;
+        }
+
+        .cta-title {
+            font-family: var(--serif);
+            font-size: clamp(2.4rem, 5vw, 4rem);
+            color: #fff;
+            font-weight: 300;
+            line-height: 1.2;
+            margin-bottom: 30px;
+        }
+
+        .cta-title em {
+            font-style: italic;
+        }
+
+        .cta-sub {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.92rem;
+            margin-bottom: 40px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        .btn-white {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 36px;
+            background: #fff;
+            color: var(--teal);
+            border-radius: 50px;
+            font-size: 0.78rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .btn-white:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        /* FOOTER */
+        footer {
+            background: #1A2C2E;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 70px 60px 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 50px;
+            max-width: 1200px;
+            margin: 0 auto 50px;
+        }
+
+        .footer-brand .brand-name {
+            font-family: var(--serif);
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .footer-brand p {
+            font-size: 0.85rem;
+            line-height: 1.8;
+            max-width: 260px;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            font-size: 0.82rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-col h4 {
+            font-size: 0.72rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.4);
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul a {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.65);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-col ul a:hover {
+            color: #fff;
+        }
+
+        .social-row {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .social-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+            text-decoration: none;
+        }
+
+        .social-btn:hover {
+            background: var(--teal);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.35);
+        }
+
+        /* SERVICE NAV TABS */
+        .service-nav {
+            background: var(--beige-dark);
+            padding: 0 60px;
+            display: flex;
+            gap: 0;
+            border-bottom: 1px solid rgba(47, 111, 115, 0.1);
+        }
+
+        .service-nav a {
+            padding: 16px 24px;
+            font-size: 0.78rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-light);
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .service-nav a:hover {
+            color: var(--teal);
+        }
+
+        .service-nav a.active {
+            color: var(--teal);
+            border-bottom-color: var(--teal);
+        }
+
+        /* FADE IN */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive hints */
+        @media (max-width: 900px) {
+            nav {
+                padding: 16px 24px;
+            }
+
+            .page-hero,
+            .about-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-collage {
+                height: 380px;
+            }
+
+            .masonry {
+                columns: 2;
+            }
+
+            .packages-grid,
+            .wardrobe-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .stars {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            /* FIXED */
+        }
+
+        .stars span {
+            position: absolute;
+            top: -10px;
+            color: white;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+
+        /* =========================
+   FINAL RESPONSIVE FIX
+   (Service Page)
+========================= */
+
+        /* GLOBAL */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        /* ---------- TABLET ---------- */
+        @media (max-width: 1024px) {
+
+            nav {
+                padding: 16px 30px;
+            }
+
+
+            .service-nav {
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+
+            .service-nav a {
+                flex: 0 0 auto;
+            }
+
+            .page-hero {
+                grid-template-columns: 1fr;
+                gap: 50px;
+                padding: 40px 30px 60px;
+            }
+
+            .hero-collage {
+                height: 420px;
+            }
+
+            .about-inner {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .timeline-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-step-left,
+            .timeline-step-right {
+                text-align: left;
+                align-items: flex-start;
+                padding: 0 0 40px 0;
+            }
+
+            .timeline-center {
+                display: none;
+            }
+
+            .masonry {
+                columns: 2;
+            }
+
+            .wardrobe-grid,
+            .packages-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* ---------- MOBILE ---------- */
+        @media (max-width: 768px) {
+
+            .breadcrumb {
+                padding: 100px 20px 0;
+            }
+
+            .page-hero {
+                padding: 30px 20px 50px;
+            }
+
+            .about-section,
+            .timeline-section,
+            .gallery-section,
+            .wardrobe-section,
+            .packages-section,
+            .faq-section,
+            .testimonials-section,
+            .cta-section {
+                padding: 60px 20px;
+            }
+
+            /* HERO */
+            .hero-stats {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            /* COLLAGE FIX */
+            .hero-collage {
+                height: auto;
+            }
+
+            .collage-main,
+            .collage-accent,
+            .collage-accent2 {
+                position: relative;
+                width: 100%;
+                height: 220px;
+                margin-bottom: 12px;
+            }
+
+            .collage-badge {
+                position: static;
+                transform: none;
+                display: inline-block;
+                margin-top: 10px;
+            }
+
+            /* ABOUT STACK FIX */
+            .about-image-stack {
+                height: auto;
+            }
+
+            .stack-img1,
+            .stack-img2 {
+                position: relative;
+                width: 100%;
+                height: 250px;
+                margin-bottom: 12px;
+            }
+
+            .about-pull {
+                position: static;
+                transform: none;
+                margin-top: 10px;
+            }
+
+            /* GALLERY */
+            .masonry {
+                columns: 1;
+            }
+
+            /* GRIDS */
+            .wardrobe-grid,
+            .packages-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .wardrobe-tips {
+                grid-template-columns: 1fr;
+            }
+
+            /* CTA */
+            .cta-title {
+                font-size: 2rem;
+            }
+
+            /* FOOTER */
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            footer {
+                padding: 50px 20px;
+            }
+        }
+
+        /* ---------- SMALL MOBILE ---------- */
+        @media (max-width: 480px) {
+
+            .page-title {
+                font-size: 1.8rem;
+            }
+
+            .cta-title {
+                font-size: 1.6rem;
+            }
+
+            .btn-primary,
+            .btn-outline,
+            .btn-white {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .service-nav {
+                padding: 0 10px;
+            }
+
+            .service-nav a {
+                font-size: 0.7rem;
+                padding: 12px 14px;
+            }
+        }
+
+        /* HAMBURGER */
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* MOBILE MENU */
+        @media (max-width: 1024px) {
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: var(--beige);
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                padding: 20px 0;
+                transform: translateY(-120%);
+                transition: 0.3s ease;
+            }
+
+            .nav-links.active {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <a href="#" class="nav-logo">
+            <img src="watermark-black-tm-copy-2.png" alt="logo" style="width: 150px;">
+        </a>
+
+        <!-- NEW HAMBURGER -->
+        <div class="menu-toggle" id="menuToggle">
+            ☰
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" >About</a></li>
+            <li><a href="maternity.html" class="active">Maternity</a></li>
+            <li><a href="new-born.html">Newborn</a></li>
+            <li><a href="cake-smash.html">Cakesmash</a></li>
+            <li><a href="family-portraits.html">Family Portraits</a></li>
+            <li><a href="portfolio.html">Gallery</a></li>
+            <li><a href="index.html#price">Pricing</a></li>
+            <li><a href="index.html#blog">Blogs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- SERVICE NAV TABS -->
+    <div class="service-nav" style="margin-top: 100px;">
+        <a href="#" class="active">✦ Your Photographer</a>
+        <a href="#">✦ The Process</a>
+        <a href="#">✦ The Gallery</a>
+        <a href="#">✦ Styling Guide</a>
+        <a href="#">✦ Pricing</a>
+        <a href="#">✦ Faq</a>
+    </div>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+        <div class="breadcrumb-inner">
+            <a href="index.html">Home</a>
+            <span>›</span>
+            <span>Services</span>
+            <span>›</span>
+            <span style="color: var(--teal);">Maternity Photography</span>
+        </div>
+    </div>
+
+    <!-- PAGE HERO -->
+    <section style="padding-top: 0; padding-bottom: 80px;">
+        <div class="page-hero">
+            <!-- LEFT: TEXT -->
+            <div class="hero-left fade-up">
+                <!-- <span class="section-eyebrow">Toronto, Ontario</span> -->
+                <h1 class="page-title">Hey there, gorgeous <br>in <em>mamas-to-be!!</em></h1>
+                <p class="page-desc">
+                    The ideal time for a maternity session is 30–36 weeks, when your bump is beautifully rounded and
+                    comfortable. For expecting multiples or twins, we recommend 20–24 weeks for a safe and relaxed
+                    shoot.
+                </p>
+                <p class="page-desc">
+                    We curate locations that reflect your style like serene outdoor settings, studios, or the comfort of
+                    your own home. Every detail is thoughtfully considered to create a luxurious, effortless experience.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item"><span class="stat-num">500+</span><span class="stat-label">Mamas
+                            Photographed</span></div>
+                    <div class="stat-item"><span class="stat-num">8+</span><span class="stat-label">Years
+                            Experience</span></div>
+                    <div class="stat-item"><span class="stat-num">30–36</span><span class="stat-label">Ideal
+                            Weeks</span></div>
+                </div>
+                <div class="hero-btns">
+                    <a href="#" class="btn-primary">
+                        Book Your Session
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M3 8h10M8 3l5 5-5 5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <a href="#packages" class="btn-outline">View Packages</a>
+                </div>
+            </div>
+
+            <!-- RIGHT: COLLAGE -->
+            <div class="hero-collage fade-up">
+                <div>
+                    <img src="assets/maternity/sevice-maternity.png" alt="">
+                </div>
+                <div class="collage-badge">✦ Toronto Studio & Outdoor</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT / PHOTOGRAPHER -->
+    <section class="about-section">
+        <div class="about-inner">
+            <div class="about-image-stack fade-up">
+                <div class="stack-img1">
+                    <img src="assets/maternity/maternity1.webp" alt="Photography studio"
+                        onerror="this.parentElement.style.background='linear-gradient(135deg,#D4C5B8,#A89070)'" />
+                </div>
+                <div class="stack-img2">
+                    <img src="assets/family/family1.webp" alt="Maternity glow"
+                        onerror="this.parentElement.style.background='linear-gradient(135deg,#BDD0C8,#5A827C)'" />
+                </div>
+                <div class="about-pull">
+                    <span class="about-pull-num">500+</span>
+                    <span class="about-pull-text">Happy Families Served</span>
+                </div>
+            </div>
+            <div class="about-text fade-up">
+                <span class="section-eyebrow">Your Photographer</span>
+                <h2>Welcome to <em>Professional Maternity Photography</em> in Canada</h2>
+                <p>
+                    I am a professional and certified Maternity, Newborn, and Child Photographer who transitioned from a
+                    successful career as a Software Engineer to pursue the artistic path that has always inspired me.
+                </p>
+                <p>
+                    Certified under renowned and ace fashion photographer Karthik Srinivasan at KAPA and further trained
+                    by Amrita Samant (MommyShots by Amrita) a pioneer in the maternity and child photography industry.
+                </p>
+                <p>
+                    For me, photography is more than a profession, it is a deeply rooted passion that inspires me to
+                    create timeless, meaningful pictures for every family I work with.
+                </p>
+                <span class="about-signature">— With love, Bloom & Bare Photography</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS TIMELINE -->
+    <section class="timeline-section">
+        <div class="timeline-header fade-up">
+            <span class="section-eyebrow" style="justify-content:center;">The Process</span>
+            <h2>How Your Session<br><em>Comes to Life</em></h2>
+        </div>
+        <div class="timeline-grid">
+            <!-- Step 1 LEFT -->
+            <div class="timeline-step-left fade-up">
+                <span class="step-num">01</span>
+                <h3 class="step-title">Inquiry & Consultation</h3>
+                <p class="step-desc">Reach out via email or the contact form. We'll schedule a relaxed phone or video
+                    call to discuss your vision, answer every question, and find your perfect date.</p>
+            </div>
+            <div class="timeline-center">
+                <div class="timeline-line"></div>
+                <div class="timeline-dot">01</div>
+                <div class="timeline-line"></div>
+            </div>
+            <div></div>
+
+            <!-- Step 2 RIGHT -->
+            <div></div>
+            <div class="timeline-center">
+                <div class="timeline-line"></div>
+                <div class="timeline-dot">02</div>
+                <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-step-right fade-up">
+                <span class="step-num">02</span>
+                <h3 class="step-title">Styling & Planning</h3>
+                <p class="step-desc">I'll send you a full wardrobe styling guide, mood board, and location options. My
+                    client closet has gowns from size XS–XL — available at no extra cost.</p>
+            </div>
+
+            <!-- Step 3 LEFT -->
+            <div class="timeline-step-left fade-up">
+                <span class="step-num">03</span>
+                <h3 class="step-title">Your Session Day</h3>
+                <p class="step-desc">Arrive, relax, and let the magic happen. Sessions are unhurried — typically 1.5 to
+                    2 hours — with time for multiple looks, locations, and genuine emotion.</p>
+            </div>
+            <div class="timeline-center">
+                <div class="timeline-line"></div>
+                <div class="timeline-dot">03</div>
+                <div class="timeline-line"></div>
+            </div>
+            <div></div>
+
+            <!-- Step 4 RIGHT -->
+            <div></div>
+            <div class="timeline-center">
+                <div class="timeline-line"></div>
+                <div class="timeline-dot">04</div>
+                <div style="flex:1"></div>
+            </div>
+            <div class="timeline-step-right fade-up">
+                <span class="step-num">04</span>
+                <h3 class="step-title">Gallery Delivery</h3>
+                <p class="step-desc">Within 3–4 weeks, your private online gallery is delivered — filled with fully
+                    edited, high-resolution images ready to print, share, and treasure forever.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery-section" id="gallery">
+        <div class="gallery-header fade-up">
+            <span class="section-eyebrow" style="justify-content:center;">The Gallery</span>
+            <h2>Maternity <em>Portfolio</em></h2>
+            <p class="gallery-sub">A glimpse into the radiant, intimate world of maternity photography — each image a
+                testament to the beauty of becoming.</p>
+        </div>
+
+
+        <!-- Masonry with real images -->
+        <div class="masonry" style="margin-top:50px;">
+
+            <div class="masonry-item fade-up">
+                <img src="assets/maternity/maternity3.webp" alt="Newborn baby" style="height:290px;object-fit:cover;"
+                    onerror="this.style.height='290px'" />
+                <div class="overlay"><span class="overlay-text">First hello</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/newborn/newborn3.webp" alt="Maternity glow"
+                    style="height:390px;object-fit:cover;object-position:top;" onerror="this.style.height='390px'" />
+                <div class="overlay"><span class="overlay-text">Mama's warmth</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/cakesmash/cakesmash3.webp" alt="Happy child" style="height:310px;object-fit:cover;"
+                    onerror="this.style.height='310px'" />
+                <div class="overlay"><span class="overlay-text">Pure joy</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/family/family3.webp" alt="Family portrait" style="height:350px;object-fit:cover;"
+                    onerror="this.style.height='350px'" />
+                <div class="overlay"><span class="overlay-text">Together always</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/maternity/maternity1.webp" alt="Baby first birthday"
+                    style="height:270px;object-fit:cover;" onerror="this.style.height='270px'" />
+                <div class="overlay"><span class="overlay-text">One year old</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/newborn/newborn.webp" alt="Mother and newborn" style="height:400px;object-fit:cover;"
+                    onerror="this.style.height='400px'" />
+                <div class="overlay"><span class="overlay-text">Bloom & grow</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/cakesmash/cakesmash.webp" alt="Newborn sleeping" style="height:280px;object-fit:cover;"
+                    onerror="this.style.height='280px'" />
+                <div class="overlay"><span class="overlay-text">Sweet dreams</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/family/family.webp" alt="Family love" style="height:360px;object-fit:cover;"
+                    onerror="this.style.height='360px'" />
+                <div class="overlay"><span class="overlay-text">Family love</span></div>
+            </div>
+
+            <div class="masonry-item fade-up">
+                <img src="assets/newborn/newborn2.webp" alt="Baby tiny feet" style="height:300px;object-fit:cover;"
+                    onerror="this.style.height='300px'" />
+                <div class="overlay"><span class="overlay-text">Tiny toes</span></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- WHAT TO WEAR -->
+    <section class="wardrobe-section">
+        <div class="wardrobe-inner">
+            <div class="wardrobe-header fade-up">
+                <span class="section-eyebrow" style="justify-content:center;">Styling Guide</span>
+                <h2>What to Wear to Your<br><em>Maternity Session</em></h2>
+            </div>
+            <div class="wardrobe-grid">
+                <div class="wardrobe-card fade-up">
+                    <div class="wardrobe-card-img">
+                        <img src="assets/maternity/maternity3.webp" alt="Studio gowns"
+                            onerror="this.parentElement.style.background='linear-gradient(135deg,#D4C5B8,#A89070)'" />
+                    </div>
+                    <div class="wardrobe-card-body">
+                        <span class="wardrobe-tag">✦ Flowy & Romantic</span>
+                        <h3>Flowy Gowns</h3>
+                        <p>Flowing fabric flatters beautifully, emphasising the bump. Choose earthy tones, dusty rose,
+                            sage, or ivory. My client closet has 30+ gowns available free of charge.</p>
+                    </div>
+                </div>
+                <div class="wardrobe-card fade-up">
+                    <div class="wardrobe-card-img">
+                        <img src="assets/family/family1.webp" alt="Fitted style"
+                            onerror="this.parentElement.style.background='linear-gradient(135deg,#BDD0C8,#5A827C)'" />
+                    </div>
+                    <div class="wardrobe-card-body">
+                        <span class="wardrobe-tag">✦ Modern & Minimal</span>
+                        <h3>Form-Fitting Looks</h3>
+                        <p>A fitted bodysuit or wrap dress beautifully showcases the bump in its full glory. Neutral
+                            tones and soft textures photograph timlessly and age-proof in 20 years.</p>
+                    </div>
+                </div>
+                <div class="wardrobe-card fade-up">
+                    <div class="wardrobe-card-img">
+                        <img src="assets/cakesmash/cakesmash.webp" alt="Partner styling"
+                            onerror="this.parentElement.style.background='linear-gradient(135deg,#D9CFC8,#9A8880)'" />
+                    </div>
+                    <div class="wardrobe-card-body">
+                        <span class="wardrobe-tag">✦ Partner & Family</span>
+                        <h3>Coordinating Outfits</h3>
+                        <p>Partners and siblings look best in complementary (not matching) tones. Avoid logos and busy
+                            prints. Think: linen, neutrals, soft denim, and classic white shirts.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="wardrobe-tips fade-up">
+                <div class="tip-card">
+                    <div class="tip-icon">🎨</div>
+                    <div class="tip-content">
+                        <h4>Colour Palette</h4>
+                        <p>Earthy tones, blush, sage, ivory, and warm whites photograph beautifully. Avoid neon or very
+                            dark colours which can cast colour on skin.</p>
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">💅</div>
+                    <div class="tip-content">
+                        <h4>Hair & Makeup</h4>
+                        <p>Professional hair & makeup is recommended. I can connect you with trusted artists. Fresh
+                            blowout or loose waves work beautifully for a timeless look.</p>
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">👗</div>
+                    <div class="tip-content">
+                        <h4>Client Closet Access</h4>
+                        <p>I maintain a curated closet of 30+ gowns, wraps, and accessories in sizes XS–2XL — all
+                            included in your session at no extra charge.</p>
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">📅</div>
+                    <div class="tip-content">
+                        <h4>Timing Is Everything</h4>
+                        <p>Book between 28–36 weeks for the most beautiful bump. Too early and the bump is small; too
+                            late and comfort decreases. 32 weeks is the sweet spot.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PACKAGES -->
+    <section class="packages-section" id="packages">
+        <div class="packages-header fade-up">
+            <span class="section-eyebrow" style="justify-content:center;">Investment</span>
+            <h2>Maternity Session<br><em>Packages</em></h2>
+        </div>
+        <div class="packages-grid">
+            <!-- Essential -->
+            <div class="package-card fade-up">
+                <div class="package-card-inner">
+                    <span class="pkg-badge">✦ Essential</span>
+                    <h3 class="pkg-name">The Bloom Session</h3>
+                    <div class="pkg-price"><sup>$</sup>450</div>
+                    <div class="pkg-divider"></div>
+                    <ul class="pkg-features">
+                        <li>1.5 hour studio session</li>
+                        <li>1 location / backdrop</li>
+                        <li>15 fully edited images</li>
+                        <li>Private online gallery</li>
+                        <li>Wardrobe styling guide</li>
+                        <li>Client closet access</li>
+                    </ul>
+                    <a href="#" class="pkg-btn">Enquire Now</a>
+                </div>
+            </div>
+            <!-- Signature — FEATURED -->
+            <div class="package-card featured fade-up">
+                <div class="pkg-popular">Most Popular</div>
+                <div class="package-card-inner">
+                    <span class="pkg-badge">✦ Signature</span>
+                    <h3 class="pkg-name">The Bare Session</h3>
+                    <div class="pkg-price"><sup>$</sup>750</div>
+                    <div class="pkg-divider"></div>
+                    <ul class="pkg-features">
+                        <li>2 hour studio + outdoor session</li>
+                        <li>3 looks / locations</li>
+                        <li>30 fully edited images</li>
+                        <li>Private online gallery</li>
+                        <li>Full wardrobe consultation</li>
+                        <li>Client closet access</li>
+                        <li>Partner & sibling portraits</li>
+                        <li>1 large fine-art print included</li>
+                    </ul>
+                    <a href="#" class="pkg-btn">Book This Session</a>
+                </div>
+            </div>
+            <!-- Luxe -->
+            <div class="package-card fade-up">
+                <div class="package-card-inner">
+                    <span class="pkg-badge">✦ Luxe</span>
+                    <h3 class="pkg-name">The Heirloom Session</h3>
+                    <div class="pkg-price"><sup>$</sup>1,200</div>
+                    <div class="pkg-divider"></div>
+                    <ul class="pkg-features">
+                        <li>3 hour full luxury session</li>
+                        <li>Unlimited looks & locations</li>
+                        <li>All edited images (50+)</li>
+                        <li>Private online gallery</li>
+                        <li>Professional styling service</li>
+                        <li>Client closet + personal shopper</li>
+                        <li>Hair & makeup coordination</li>
+                        <li>Premium album + wall art package</li>
+                        <li>Newborn session priority booking</li>
+                    </ul>
+                    <a href="#" class="pkg-btn">Enquire Now</a>
+                </div>
+            </div>
+        </div>
+        <div style=" max-width: 1100px; margin: 30px auto;">
+            <p style=" font-size:0.82rem; color:var(--text-light);"> <span style="color: red;">*</span>It is prohibited
+                to
+                use your cell phone camera or any other camera during the photo session.
+            </p>
+            <p style="  font-size:0.82rem; color:var(--text-light);"><span style="color: red;">*</span> It is client’s
+                responsibility to download, store and protect photographs from loosing after 14 days from the
+                date they have been sent to the client. After 14 days I don’t grantee availability of your pictures.
+                Additional fee of $30 applied for re-sending the pictures in case if I still have them.</p>
+            <p style="  font-size:0.82rem; color:var(--text-light);"><span style="color: red;">*</span> By using my
+                services, you agree to these terms.</p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="faq-inner">
+            <div class="faq-header fade-up">
+                <span class="section-eyebrow" style="justify-content:center;">Questions</span>
+                <h2>Frequently Asked<br><em>Questions</em></h2>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-q">
+                    <span>When is the best time to book my maternity session?</span>
+                    <div class="faq-icon"><svg viewBox="0 0 14 14" fill="none">
+                            <path d="M7 1v12M1 7h12" stroke="#3A3530" stroke-width="1.5" stroke-linecap="round" />
+                        </svg></div>
+                </div>
+                <div class="faq-a">
+                    <p>I recommend booking between 28–36 weeks of pregnancy, with 32 weeks being the sweet spot. This
+                        ensures your bump is beautifully prominent while you're still comfortable and glowing. Please
+                        book early — maternity dates fill up quickly, especially in spring and autumn.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-q">
+                    <span>Where is your studio located?</span>
+                    <div class="faq-icon"><svg viewBox="0 0 14 14" fill="none">
+                            <path d="M7 1v12M1 7h12" stroke="#3A3530" stroke-width="1.5" stroke-linecap="round" />
+                        </svg></div>
+                </div>
+                <div class="faq-a">
+                    <p>My warm, light-filled studio is located in Toronto, Ontario. I also travel to outdoor locations
+                        across the GTA — including ravines, gardens, and lakefronts — at no additional charge within
+                        25km of the studio. Exact studio address is shared upon booking.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-q">
+                    <span>Can my partner and/or children join the session?</span>
+                    <div class="faq-icon"><svg viewBox="0 0 14 14" fill="none">
+                            <path d="M7 1v12M1 7h12" stroke="#3A3530" stroke-width="1.5" stroke-linecap="round" />
+                        </svg></div>
+                </div>
+                <div class="faq-a">
+                    <p>Absolutely — and I encourage it! Partner and sibling portraits are included in all Bare and
+                        Heirloom packages. For the Bloom package, family portraits can be added for a small supplement.
+                        Children under 3 tend to do best for the first 20–30 minutes, so we start with family shots.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-q">
+                    <span>How long until I receive my gallery?</span>
+                    <div class="faq-icon"><svg viewBox="0 0 14 14" fill="none">
+                            <path d="M7 1v12M1 7h12" stroke="#3A3530" stroke-width="1.5" stroke-linecap="round" />
+                        </svg></div>
+                </div>
+                <div class="faq-a">
+                    <p>Your private online gallery is delivered within 3–4 weeks of your session. Rush delivery (within
+                        1 week) is available for an additional fee — useful if you're close to your due date. You'll
+                        receive a sneak peek on social media within 48 hours of your session.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-q">
+                    <span>What if I go into labour before my session date?</span>
+                    <div class="faq-icon"><svg viewBox="0 0 14 14" fill="none">
+                            <path d="M7 1v12M1 7h12" stroke="#3A3530" stroke-width="1.5" stroke-linecap="round" />
+                        </svg></div>
+                </div>
+                <div class="faq-a">
+                    <p>Life happens! If baby arrives before your maternity session, we can easily convert your booking
+                        into a newborn session instead — at no penalty. I always hold space for flexibility because I
+                        understand that pregnancy is beautifully unpredictable.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-q">
+                    <span>Do you offer payment plans?</span>
+                    <div class="faq-icon"><svg viewBox="0 0 14 14" fill="none">
+                            <path d="M7 1v12M1 7h12" stroke="#3A3530" stroke-width="1.5" stroke-linecap="round" />
+                        </svg></div>
+                </div>
+                <div class="faq-a">
+                    <p>Yes — I offer interest-free payment plans for all packages. A 30% deposit secures your date, with
+                        the remainder due on or before your session day. I want this experience to be accessible without
+                        financial stress. Please ask during your consultation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials-section">
+        <div class="testimonials-header fade-up">
+            <span class="section-eyebrow" style="justify-content:center;">Kind Words</span>
+            <h2>What Clients<br><em>Say</em></h2>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card fade-up">
+                <div class="testimonial-stars">
+                    <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+                        class="star">★</span><span class="star">★</span>
+                </div>
+                <p class="testimonial-text">"She captured the love that words could never hold — I look at these photos
+                    and feel everything all over again. The most beautiful experience of my pregnancy."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar"><img
+                            src="https://images.pexels.com/photos/3996302/pexels-photo-3996302.jpeg?auto=compress&cs=tinysrgb&w=100"
+                            alt="Sarah" onerror="this.parentElement.style.background='var(--beige-dark)'" /></div>
+                    <div class="author-info"><span class="author-name">Sarah M.</span><span
+                            class="author-meta">Maternity Client · Toronto, 2024</span></div>
+                </div>
+            </div>
+            <div class="testimonial-card fade-up">
+                <div class="testimonial-stars">
+                    <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+                        class="star">★</span><span class="star">★</span>
+                </div>
+                <p class="testimonial-text">"I was so nervous, but the moment I arrived I felt completely at ease. The
+                    gowns were stunning, the studio was magical, and the photos made me cry happy tears."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar"><img
+                            src="https://images.pexels.com/photos/1648387/pexels-photo-1648387.jpeg?auto=compress&cs=tinysrgb&w=100"
+                            alt="Amara" onerror="this.parentElement.style.background='var(--beige-dark)'" /></div>
+                    <div class="author-info"><span class="author-name">Amara K.</span><span
+                            class="author-meta">Maternity Client · Mississauga, 2024</span></div>
+                </div>
+            </div>
+            <div class="testimonial-card fade-up">
+                <div class="testimonial-stars">
+                    <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+                        class="star">★</span><span class="star">★</span>
+                </div>
+                <p class="testimonial-text">"Worth every penny and then some. The Heirloom package was an indulgence I
+                    will never regret — the album sits on our coffee table and guests can't stop looking at it."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar"><img
+                            src="https://images.pexels.com/photos/35537/child-children-girl-happy.jpg?auto=compress&cs=tinysrgb&w=100"
+                            alt="Priya" onerror="this.parentElement.style.background='var(--beige-dark)'" /></div>
+                    <div class="author-info"><span class="author-name">Priya R.</span><span class="author-meta">Heirloom
+                            Client · Markham, 2023</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <img class="cta-bg-img"
+            src="https://images.pexels.com/photos/3996302/pexels-photo-3996302.jpeg?auto=compress&cs=tinysrgb&w=1400"
+            alt="" aria-hidden="true" />
+        <div class="cta-blob cta-blob-1"></div>
+        <div class="cta-blob cta-blob-2"></div>
+        <div class="cta-inner">
+            <p class="cta-eyebrow">Begin Your Story</p>
+            <h2 class="cta-title">Let's capture your<br><em>beautiful journey</em></h2>
+            <p class="cta-sub">Maternity dates fill quickly — especially spring and autumn. Reach out today and let's
+                create something extraordinary together.</p>
+            <a href="#" class="btn-white">
+                Book Your Session
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M3 8h10M8 3l5 5-5 5" stroke="var(--teal)" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <span class="brand-name">Bloom & Bare Photography</span>
+                <p>Specialising in maternity, newborn, and family photography across Toronto and the Greater Toronto
+                    Area. Every session is crafted with care, creativity, and heart.</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                            <path
+                                d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5zm0 6.5A1.5 1.5 0 1 1 8 4a1.5 1.5 0 0 1 0 3.5z"
+                                fill="rgba(255,255,255,0.5)" />
+                        </svg>
+                        Canada
+                    </div>
+                    <div class="contact-item">
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                            <path
+                                d="M2 2h12a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm6 7L2.5 4h11L8 9z"
+                                fill="rgba(255,255,255,0.5)" />
+                        </svg>
+                        twilightmemoriesphotography@gmail.com
+                    </div>
+                    <div class="contact-item">
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                            <path
+                                d="M3 2a1 1 0 0 1 1-1h2l1 3-1.5 1.5A10 10 0 0 0 9.5 9L11 7.5l3 1v2a1 1 0 0 1-1 1A12 12 0 0 1 2 3z"
+                                fill="rgba(255,255,255,0.5)" />
+                        </svg>
+                        +1 4379935392
+                    </div>
+                </div>
+                <div class="social-row">
+                    <a href="#" class="social-btn" aria-label="Instagram"><svg width="14" height="14"
+                            viewBox="0 0 24 24" fill="none">
+                            <rect x="2" y="2" width="20" height="20" rx="5" stroke="white" stroke-width="1.5" />
+                            <circle cx="12" cy="12" r="5" stroke="white" stroke-width="1.5" />
+                            <circle cx="17.5" cy="6.5" r="1" fill="white" />
+                        </svg></a>
+                    <a href="#" class="social-btn" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24"
+                            fill="none">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="white"
+                                stroke-width="1.5" stroke-linejoin="round" />
+                        </svg></a>
+                    <a href="#" class="social-btn" aria-label="Pinterest"><svg width="14" height="14"
+                            viewBox="0 0 24 24" fill="rgba(255,255,255,0.8)">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.77 1.22-5.18 1.22-5.18s-.31-.63-.31-1.55c0-1.46.84-2.55 1.89-2.55.89 0 1.32.67 1.32 1.47 0 .9-.57 2.24-.87 3.48-.25 1.04.52 1.88 1.54 1.88 1.84 0 3.08-2.37 3.08-5.18 0-2.14-1.44-3.64-3.49-3.64-2.38 0-3.77 1.78-3.77 3.63 0 .72.28 1.49.62 1.91.07.08.08.15.06.23-.06.26-.2.82-.23.93-.04.15-.12.18-.28.11-.98-.46-1.59-1.9-1.59-3.06 0-2.49 1.81-4.77 5.21-4.77 2.74 0 4.87 1.95 4.87 4.56 0 2.72-1.71 4.9-4.08 4.9-.8 0-1.55-.41-1.8-.9L9.8 18.3c-.2.75-.72 1.69-1.07 2.25.8.25 1.65.39 2.27.39C17.52 21 22 16.52 22 12c0-5.52-4.48-10-10-10z" />
+                        </svg></a>
+                    <a href="#" class="social-btn" aria-label="TikTok"><svg width="14" height="14" viewBox="0 0 24 24"
+                            fill="white">
+                            <path
+                                d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.72a8.16 8.16 0 0 0 4.77 1.52V6.75a4.85 4.85 0 0 1-1-.06z" />
+                        </svg></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Maternity Sessions</a></li>
+                    <li><a href="#">Newborn Portraits</a></li>
+                    <li><a href="#">Cake Smash</a></li>
+                    <li><a href="#">Family Portraits</a></li>
+                    <li><a href="#">Mini Sessions</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Studio</h4>
+                <ul>
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="#">The Gallery</a></li>
+                    <li><a href="#">Investment</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Serving</h4>
+                <ul>
+                    <li><a href="#">Toronto</a></li>
+                    <li><a href="#">North York</a></li>
+                    <li><a href="#">Mississauga</a></li>
+                    <li><a href="#">Markham</a></li>
+                    <li><a href="#">Vaughan</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Twilight Memories Photography. Canada.</span>
+            <span>Privacy Policy &nbsp;·&nbsp; Terms of Service</span>
+        </div>
+    </footer>
+
+    <!-- <div class="stars"></div> -->
+
+    <script>
+        // SCROLL FADE-IN
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach((e, i) => {
+                if (e.isIntersecting) {
+                    setTimeout(() => e.target.classList.add('visible'), (i % 3) * 80);
+                    obs.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.08 });
+        document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+        // FAQ TOGGLE
+        function toggleFaq(item) {
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        }
+
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
+
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+            menuToggle.textContent = navLinks.classList.contains("active") ? "✕" : "☰";
+        });
+    </script>
+</body>
+
+</html>

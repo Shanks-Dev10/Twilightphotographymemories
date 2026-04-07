@@ -88,7 +88,8 @@
             transition: color 0.2s;
         }
 
-        .nav-links a:hover {
+        .nav-links a:hover,
+        .nav-links a.active {
             color: var(--teal);
         }
 
@@ -1425,16 +1426,17 @@
             ☰
         </div>
 
-        <ul class="nav-links" id="navLinks">
+         <ul class="nav-links" id="navLinks">
             <li><a href="index.html">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="service.html">Maternity</a></li>
-            <li><a href="#newborn">Newborn</a></li>
-            <li><a href="#cakesmash">Cakesmash</a></li>
-            <li><a href="#family">Family Portraits</a></li>
-            <li><a href="#price">Pricing</a></li>
-            <li><a href="#blog">Blogs</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="maternity.html">Maternity</a></li>
+            <li><a href="new-born.html">Newborn</a></li>
+            <li><a href="cake-smash.html">Cakesmash</a></li>
+            <li><a href="family-portraits.html">Family Portraits</a></li>
+            <li><a href="portfolio.html">Gallery</a></li>
+            <li><a href="index.html#price">Pricing</a></li>
+            <li><a href="index.html#blog">Blogs</a></li>
+            <li><a href="contact.html" class="active">Contact Us</a></li>
         </ul>
     </nav>
 
@@ -1995,6 +1997,7 @@
 
         menuToggle.addEventListener("click", () => {
             navLinks.classList.toggle("active");
+            menuToggle.textContent = navLinks.classList.contains("active") ? "✕" : "☰";
         });
     </script>
     <style>
